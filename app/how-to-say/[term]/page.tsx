@@ -1,6 +1,61 @@
 import { searchWords, searchPhrases } from '@/lib/dictionary';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import HowToSayClient from './HowToSayClient';
+
+// Map how-to-say terms to their most relevant dictionary category
+const TERM_CATEGORY: Record<string, { slug: string; name: string }> = {
+  'hello': { slug: 'greetings', name: 'Greetings' },
+  'thank-you': { slug: 'greetings', name: 'Greetings' },
+  'goodbye': { slug: 'greetings', name: 'Greetings' },
+  'how-are-you': { slug: 'greetings', name: 'Greetings' },
+  'please': { slug: 'greetings', name: 'Greetings' },
+  'sorry': { slug: 'greetings', name: 'Greetings' },
+  'yes': { slug: 'greetings', name: 'Greetings' },
+  'no': { slug: 'greetings', name: 'Greetings' },
+  'welcome': { slug: 'greetings', name: 'Greetings' },
+  'my-name-is': { slug: 'greetings', name: 'Greetings' },
+  'i-dont-understand': { slug: 'greetings', name: 'Greetings' },
+  'i-dont-speak-arabic': { slug: 'greetings', name: 'Greetings' },
+  'water': { slug: 'food', name: 'Food & Drink' },
+  'tea': { slug: 'food', name: 'Food & Drink' },
+  'coffee': { slug: 'food', name: 'Food & Drink' },
+  'bread': { slug: 'food', name: 'Food & Drink' },
+  'delicious': { slug: 'food', name: 'Food & Drink' },
+  'food': { slug: 'food', name: 'Food & Drink' },
+  'eat': { slug: 'verbs', name: 'Verbs' },
+  'drink': { slug: 'verbs', name: 'Verbs' },
+  'go': { slug: 'verbs', name: 'Verbs' },
+  'come': { slug: 'verbs', name: 'Verbs' },
+  'want': { slug: 'verbs', name: 'Verbs' },
+  'i-like': { slug: 'verbs', name: 'Verbs' },
+  'how-much': { slug: 'shopping', name: 'Shopping' },
+  'expensive': { slug: 'shopping', name: 'Shopping' },
+  'cheap': { slug: 'shopping', name: 'Shopping' },
+  'market': { slug: 'shopping', name: 'Shopping' },
+  'money': { slug: 'money', name: 'Money' },
+  'taxi': { slug: 'transport', name: 'Transport' },
+  'where': { slug: 'directions', name: 'Directions' },
+  'bathroom': { slug: 'directions', name: 'Directions' },
+  'house': { slug: 'home', name: 'Home & House' },
+  'doctor': { slug: 'health', name: 'Health' },
+  'help': { slug: 'emergency', name: 'Emergency' },
+  'beautiful': { slug: 'adjectives', name: 'Adjectives' },
+  'good': { slug: 'adjectives', name: 'Adjectives' },
+  'bad': { slug: 'adjectives', name: 'Adjectives' },
+  'big': { slug: 'adjectives', name: 'Adjectives' },
+  'small': { slug: 'adjectives', name: 'Adjectives' },
+  'hot': { slug: 'adjectives', name: 'Adjectives' },
+  'cold': { slug: 'adjectives', name: 'Adjectives' },
+  'love': { slug: 'family', name: 'Family & People' },
+  'friend': { slug: 'family', name: 'Family & People' },
+  'family': { slug: 'family', name: 'Family & People' },
+  'mother': { slug: 'family', name: 'Family & People' },
+  'father': { slug: 'family', name: 'Family & People' },
+  'god-willing': { slug: 'religion', name: 'Faith & Blessings' },
+  'lets-go': { slug: 'slang', name: 'Street Slang' },
+  'enough': { slug: 'slang', name: 'Street Slang' },
+};
 
 // The 50+ most searched "how do you say X in Moroccan Arabic" queries
 const TERMS: Record<string, { query: string; title: string; description: string }> = {
@@ -98,10 +153,49 @@ export default async function HowToSayPage({ params }: { params: { term: string 
     })),
   };
 
+  const category = TERM_CATEGORY[params.term];
+  const termLabel = params.term.replace(/-/g, ' ');
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <HowToSayClient term={t.query} words={words} phrases={phrases} title={t.title} description={t.description} />
+
+      {/* Server-rendered context section for SEO */}
+      <section className="px-8 md:px-[8%] lg:px-[12%] py-16 border-t border-neutral-100">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-2xl md:text-3xl mb-6">About this word in Darija</h2>
+          <p className="text-neutral-900 leading-relaxed mb-4">{t.description}</p>
+          <p className="text-neutral-900 leading-relaxed mb-4">
+            Darija (الدارجة) is Moroccan Arabic — the everyday spoken language of 40 million Moroccans.
+            Unlike Modern Standard Arabic, it&apos;s rarely written down and draws heavily on French, Spanish,
+            and Amazigh vocabulary. Learning how to say &ldquo;{termLabel}&rdquo; the way Moroccans actually
+            say it — with the right pronunciation, register, and cultural context — is the difference
+            between sounding like a textbook and sounding like you belong.
+          </p>
+          <p className="text-neutral-900 leading-relaxed mb-8">
+            Every entry on Everyday Darija includes Arabic script, romanized pronunciation, English and
+            French translations, and cultural notes where they matter. Use the search above to explore
+            related terms, or browse by category below.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            {category && (
+              <Link
+                href={`/category/${category.slug}`}
+                className="border border-neutral-300 px-6 py-3 text-sm uppercase tracking-wider hover:border-[#c53a1a] hover:text-[#c53a1a] transition-colors"
+              >
+                Browse {category.name} &rarr;
+              </Link>
+            )}
+            <Link
+              href="/"
+              className="border border-neutral-300 px-6 py-3 text-sm uppercase tracking-wider hover:border-[#c53a1a] hover:text-[#c53a1a] transition-colors"
+            >
+              Full Dictionary &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
