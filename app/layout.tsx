@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Darija Dictionary — 10,000 Moroccan Arabic Words, Free",
-    template: "%s | Darija Dictionary by Dancing with Lions",
+    template: "%s | Darija Dictionary",
   },
   description: "Free Moroccan Arabic dictionary. 10,000 Darija words, 1,500 phrases — with Arabic script, pronunciation, and cultural notes. The language 40 million Moroccans actually speak.",
   keywords: [
