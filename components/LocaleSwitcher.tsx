@@ -2,18 +2,21 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import { useTransition } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LocaleSwitcher({ subtle = false }: { subtle?: boolean }) {
   const locale = useLocale();
   const t = useTranslations('language');
+  const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
   const setLocale = (next: 'en' | 'fr') => {
     if (next === locale) return;
     document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
     startTransition(() => {
-      // Soft refresh — preserves URL, swaps server-rendered content
-      window.location.reload();
+      // Soft refresh — re-runs server components for the new locale,
+      // no navigation event, scroll position preserved.
+      router.refresh();
     });
   };
 
