@@ -1,6 +1,9 @@
 import { getWordsByCategory, getWordCategories } from '@/lib/dictionary';
 import type { Metadata } from 'next';
+import { getLocale } from 'next-intl/server';
 import CategoryClient from './CategoryClient';
+
+const SITE_URL = 'https://darija.io';
 
 const CATEGORY_META: Record<string, { title: string; description: string }> = {
   food: { title: 'Moroccan Food Words in Darija', description: 'Every Darija word you need at the table — tagine, couscous, mint tea, street food, spices, and the phrases that make Moroccan hosts smile.' },
@@ -46,17 +49,24 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const meta = CATEGORY_META[params.slug];
   const name = meta?.title || `${params.slug} — Darija Words`;
+  const url = `${SITE_URL}/category/${params.slug}`;
   return {
     title: name,
     description: meta?.description || `Browse Darija words in the ${params.slug} category.`,
     openGraph: { title: name, description: meta?.description },
-    alternates: { canonical: `https://darija.io/category/${params.slug}` },
+    alternates: {
+      canonical: url,
+      languages: { en: url, fr: url, 'x-default': url },
+    },
   };
 }
 
 export default async function CategoryPage({ params }: { params: { slug: string } }) {
-  const words = await getWordsByCategory(params.slug);
-  const categories = await getWordCategories();
+  const [words, categories, locale] = await Promise.all([
+    getWordsByCategory(params.slug),
+    getWordCategories(),
+    getLocale(),
+  ]);
   const current = categories.find(c => c.id === params.slug);
   const meta = CATEGORY_META[params.slug];
 
@@ -83,6 +93,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
         currentSlug={params.slug}
         currentName={current?.name || params.slug}
         description={meta?.description || ''}
+        locale={locale}
       />
     </>
   );

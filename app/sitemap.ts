@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import words from '@/data/words.json';
 import phrases from '@/data/phrases.json';
+import { getPrioritizedHowToSaySlugs } from '@/lib/howToSay';
 
 const SITE_URL = 'https://darija.io';
 const today = new Date().toISOString().split('T')[0];
@@ -16,22 +17,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/how-to-say`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
   ];
 
-  // How-to-say pages
-  const howToSayTerms = [
-    'hello', 'thank-you', 'goodbye', 'how-are-you', 'please', 'sorry', 'yes', 'no',
-    'how-much', 'water', 'tea', 'coffee', 'bread', 'delicious', 'beautiful', 'love',
-    'where', 'bathroom', 'taxi', 'money', 'food', 'good', 'bad', 'big', 'small',
-    'hot', 'cold', 'i-dont-understand', 'i-dont-speak-arabic', 'my-name-is',
-    'friend', 'family', 'mother', 'father', 'house', 'market', 'expensive', 'cheap',
-    'doctor', 'help', 'eat', 'drink', 'go', 'come', 'want', 'i-like',
-    'god-willing', 'welcome', 'lets-go', 'enough',
-  ];
+  // How-to-say pages — every English headword in the dictionary becomes a
+  // "How to say X" page. Sitemap includes the prioritized 2000 most important
+  // ones; the rest are still reachable but not surfaced to crawlers en masse.
+  const howToSayTerms = getPrioritizedHowToSaySlugs(2000);
 
   const howToSayPages: MetadataRoute.Sitemap = howToSayTerms.map(term => ({
     url: `${SITE_URL}/how-to-say/${term}`,
     lastModified: today,
     changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    priority: 0.6,
   }));
 
   // Category pages
