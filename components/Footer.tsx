@@ -13,7 +13,7 @@ export default function Footer() {
       {/* Level 1 — Navigation */}
       <div style={{ backgroundColor: '#1f1f1f' }}>
         <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
               <Link href="/" className="block mb-3">
@@ -47,17 +47,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Network */}
-            <div>
-              <h3 className="uppercase tracking-widest text-[10px] text-white/80 mb-3">{t('network')}</h3>
-              <ul className="space-y-2">
-                <li><a href="https://www.slowmorocco.com" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">Slow Morocco</a></li>
-                <li><a href="https://architectureofmorocco.com" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">Architecture of Morocco</a></li>
-                <li><a href="https://cuisinesofmorocco.com" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">Cuisines of Morocco</a></li>
-                <li><a href="https://derb.so" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">derb</a></li>
-                <li><a href="https://www.riaddisiena.com" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">Riad di Siena</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
