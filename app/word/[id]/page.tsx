@@ -19,7 +19,12 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   return {
     title,
     description,
-    openGraph: { title, description },
+    openGraph: {
+      title,
+      description,
+      url: `https://darija.io/word/${word.id}`,
+      images: [{ url: 'https://darija.io/og-image.jpg', width: 1200, height: 630, alt: 'Everyday Darija Dictionary' }],
+    },
     alternates: { canonical: `https://darija.io/word/${params.id}` },
   };
 }
@@ -36,6 +41,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
     description: word.english,
     inLanguage: 'ar',
     url: `https://darija.io/word/${word.id}`,
+    dateModified: new Date().toISOString().split('T')[0],
     inDefinedTermSet: {
       '@type': 'DefinedTermSet',
       name: 'Everyday Darija Dictionary',

@@ -56,9 +56,6 @@ export const metadata: Metadata = {
     images: [`${siteUrl}/og-image.jpg`],
   },
   robots: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" as const, "max-video-preview": -1 },
-  alternates: {
-    canonical: siteUrl,
-  },
   category: "education",
   other: {
     "citation_title": "Darija Dictionary: Comprehensive Moroccan Arabic Reference",

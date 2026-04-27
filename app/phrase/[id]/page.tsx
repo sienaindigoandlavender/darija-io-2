@@ -40,6 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       description,
       url: `${SITE_URL}/phrase/${id}`,
       siteName: 'Everyday Darija',
+      images: [{ url: 'https://darija.io/og-image.jpg', width: 1200, height: 630, alt: 'Everyday Darija Dictionary' }],
     },
     alternates: { canonical: `${SITE_URL}/phrase/${id}` },
   };
@@ -65,6 +66,7 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
     description: phrase.english,
     inLanguage: 'ar',
     url: `${SITE_URL}/phrase/${phrase.id}`,
+    dateModified: new Date().toISOString().split('T')[0],
     inDefinedTermSet: {
       '@type': 'DefinedTermSet',
       name: 'Everyday Darija Phrase Book',
