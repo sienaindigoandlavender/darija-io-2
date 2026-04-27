@@ -219,6 +219,21 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
           </section>
         )}
 
+        {/* Ecosystem link */}
+        <div className="mt-12 pt-6 border-t border-neutral-200">
+          <p className="text-xs text-neutral-400">
+            Travelling to Morocco?{' '}
+            <a href="https://www.slowmorocco.com" target="_blank" rel="noopener noreferrer"
+               className="underline hover:text-neutral-600 transition-colors">
+              Slow Morocco
+            </a>{' '}and{' '}
+            <a href="https://derb.so" target="_blank" rel="noopener noreferrer"
+               className="underline hover:text-neutral-600 transition-colors">
+              Derb
+            </a>{' '}explain the context behind the words.
+          </p>
+        </div>
+
         {/* Cross-links */}
         <footer className="mt-12 pt-8 border-t border-neutral-100 text-sm text-neutral-500">
           <p>
