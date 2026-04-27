@@ -1,30 +1,75 @@
 import type { Metadata } from 'next';
-import HomeClient from './HomeClient';
+import { getTranslations, getLocale } from 'next-intl/server';
+import {
+  getAllWords,
+  getWordsByTag,
+  getProverbs,
+  getWordCategories,
+  getPhraseCategories,
+  getMetadata,
+  getPhrasesByCategory,
+} from '@/lib/dictionary';
+import HomeHero from './_home/HomeHero';
+import WordOfTheDay from './_home/WordOfTheDay';
+import CategoryGrid from './_home/CategoryGrid';
+import FirstDaySection from './_home/FirstDaySection';
+import PhrasebookSection from './_home/PhrasebookSection';
+import WisdomSection from './_home/WisdomSection';
+import { dayIndex, pickByDay } from './_home/util';
 
-export const metadata: Metadata = {
-  title: "Darija Dictionary — 10,000 Moroccan Arabic Words, Free",
-  description: "Free Moroccan Arabic dictionary. 10,000 Darija words, 1,500 phrases — with Arabic script, pronunciation, and cultural notes. The language 40 million Moroccans actually speak.",
-  alternates: { canonical: "https://darija.io" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const t = await getTranslations('site');
+  return {
+    title: `${t('name')} — ${t('tagline')}`,
+    description: t('description'),
+    alternates: {
+      canonical: 'https://darija.io',
+      languages: {
+        en: 'https://darija.io',
+        fr: 'https://darija.io',
+        'x-default': 'https://darija.io',
+      },
+    },
+    openGraph: {
+      title: t('name'),
+      description: t('description'),
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+    },
+  };
+}
 
-export default function Home() {
+export default async function HomePage() {
+  // All data fetched server-side — no client API calls on first paint
+  const [allWords, essentials, proverbs, wordCategories, phraseCategories, meta, survivalPhrases] =
+    await Promise.all([
+      getAllWords(),
+      getWordsByTag('essential'),
+      getProverbs(),
+      getWordCategories(),
+      getPhraseCategories(),
+      getMetadata(),
+      getPhrasesByCategory('survival'),
+    ]);
+
+  // Word of the day — deterministic per day, only words with cultural notes
+  const withNotes = allWords.filter(w => w.cultural_note);
+  const wotd = withNotes.length > 0 ? withNotes[dayIndex() % withNotes.length] : null;
+
+  // First-day picks: 8 essentials, rotated daily for freshness
+  const firstDayPicks = pickByDay(essentials, 8);
+
+  // Featured phrases: 4 survival phrases, rotated daily
+  const featuredPhrases = pickByDay(survivalPhrases, 4);
+
   return (
     <>
-      {/* Crawlable content for Googlebot — hidden visually but readable by search engines */}
-      <div className="sr-only">
-        <h1>Darija Dictionary — Free Moroccan Arabic Reference</h1>
-        <p>
-          The most comprehensive free Moroccan Arabic (Darija) dictionary online.
-          10,000 words and 1,500 phrases with Arabic script, romanized pronunciation,
-          English and French translations, and cultural notes. Organized across 33
-          categories: greetings, food, family, slang, verbs, religion, crafts, and more.
-        </p>
-        <p>Learn how to say hello, thank you, goodbye, and 10,000 other words in Moroccan Arabic.</p>
-        <p>Categories: Greetings · Food &amp; Drink · Family · Shopping · Health ·
-           Slang · Verbs · Directions · Numbers · Time · Religion · Crafts ·
-           Architecture · Nature · Animals · Clothing · Music · Emergency</p>
-      </div>
-      <HomeClient />
+      <HomeHero stats={meta} />
+      {wotd && <WordOfTheDay word={wotd} />}
+      <CategoryGrid wordCategories={wordCategories} phraseCategories={phraseCategories} />
+      <FirstDaySection words={firstDayPicks} />
+      <PhrasebookSection phrases={featuredPhrases} />
+      {proverbs.length > 0 && <WisdomSection proverbs={proverbs.slice(0, 6)} />}
     </>
   );
 }

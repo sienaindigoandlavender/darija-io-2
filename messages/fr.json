@@ -1,0 +1,94 @@
+{
+  "site": {
+    "name": "Dictionnaire Darija",
+    "tagline": "L'arabe marocain, enfin clair.",
+    "description": "Dictionnaire gratuit de l'arabe marocain. 10 000 mots en darija, 1 500 phrases — avec écriture arabe, prononciation et notes culturelles."
+  },
+  "nav": {
+    "dictionary": "Dictionnaire",
+    "phrases": "Phrases",
+    "grammar": "Grammaire",
+    "firstDay": "Premier jour",
+    "about": "À propos",
+    "language": "Langue"
+  },
+  "search": {
+    "label": "Rechercher",
+    "placeholder": "Cherchez en darija, anglais, français — ou arabizi (mzyan, shukran…)",
+    "shortPlaceholder": "Rechercher",
+    "tryLabel": "Essayez",
+    "examples": ["mzyan", "shukran", "combien", "inchallah", "labas"],
+    "resultsWords": "{count, plural, one {# mot} other {# mots}}",
+    "resultsPhrases": "{count, plural, one {# phrase} other {# phrases}}",
+    "noResults": "Aucun résultat pour « {query} »",
+    "noResultsHint": "Essayez une autre orthographe — la darija n'en a pas de standard.",
+    "viewAll": "Voir tous les résultats"
+  },
+  "home": {
+    "stats": {
+      "words": "mots",
+      "phrases": "phrases",
+      "categories": "catégories"
+    },
+    "wordOfTheDay": "Mot du jour",
+    "phraseOfTheDay": "Phrase du jour",
+    "browseByCategory": "Parcourir par catégorie",
+    "browseByCategoryDesc": "33 catégories, classées par vie quotidienne — des salutations à l'argot de rue.",
+    "essentials": "Commencez ici",
+    "essentialsTitle": "Vos mots du premier jour",
+    "essentialsDesc": "Les mots qu'il vous faut avant de sortir. Dites-les mal — les Marocains adoreront que vous essayiez.",
+    "phrasebookEyebrow": "Guide de phrases",
+    "phrasebookTitle": "Des phrases qui marchent",
+    "phrasebookDesc": "Pas de l'arabe scolaire. De la vraie darija — ce que les gens disent vraiment dans le taxi, au souk, au café.",
+    "wisdomEyebrow": "Hikma",
+    "wisdomTitle": "Sagesse marocaine",
+    "tapToExplore": "Touchez une catégorie pour explorer",
+    "roadTo": "Cap sur {target}"
+  },
+  "word": {
+    "back": "Dictionnaire",
+    "pronunciation": "Prononciation",
+    "meaning": "Signification",
+    "alsoWritten": "Aussi écrit",
+    "culturalNote": "Note culturelle",
+    "examples": "En contexte",
+    "conjugation": "Conjugaison",
+    "related": "Apparentés",
+    "sameRoot": "Même racine",
+    "seeAlso": "Voir aussi",
+    "playAudio": "Écouter la prononciation",
+    "audioComing": "Audio bientôt disponible",
+    "copyArabizi": "Copier",
+    "copied": "Copié",
+    "share": "Partager",
+    "category": "Catégorie",
+    "partOfSpeech": "Nature",
+    "register": "Registre",
+    "howToSayTitle": "Comment dire « {english} » en arabe marocain",
+    "howToSayBody": "En darija (arabe marocain), « {english} » se dit {darija} ({arabic}), prononcé /{pronunciation}/."
+  },
+  "phrase": {
+    "literally": "Littéralement",
+    "theyReply": "On vous répondra",
+    "useWhen": "Utiliser quand"
+  },
+  "category": {
+    "wordsCount": "{count} mots",
+    "browseAll": "Parcourir toutes les catégories"
+  },
+  "footer": {
+    "tagline": "L'arabe marocain pour tous. Un dictionnaire vivant des mots, phrases et culture darija.",
+    "explore": "Explorer",
+    "learn": "Apprendre",
+    "network": "Réseau",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "disclaimer": "Mentions légales",
+    "poweredBy": "Un projet {slow} / Propulsé par {dwl}"
+  },
+  "language": {
+    "english": "English",
+    "french": "Français",
+    "switch": "Changer de langue"
+  }
+}

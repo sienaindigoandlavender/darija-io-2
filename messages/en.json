@@ -1,0 +1,94 @@
+{
+  "site": {
+    "name": "Darija Dictionary",
+    "tagline": "Moroccan Arabic, finally clear.",
+    "description": "Free Moroccan Arabic dictionary. 10,000 Darija words, 1,500 phrases — with Arabic script, pronunciation, and cultural notes."
+  },
+  "nav": {
+    "dictionary": "Dictionary",
+    "phrases": "Phrases",
+    "grammar": "Grammar",
+    "firstDay": "First Day",
+    "about": "About",
+    "language": "Language"
+  },
+  "search": {
+    "label": "Search",
+    "placeholder": "Search Darija, English, French — or Arabizi (mzyan, shukran…)",
+    "shortPlaceholder": "Search",
+    "tryLabel": "Try",
+    "examples": ["mzyan", "shukran", "how much", "inshallah", "labas"],
+    "resultsWords": "{count, plural, one {# word} other {# words}}",
+    "resultsPhrases": "{count, plural, one {# phrase} other {# phrases}}",
+    "noResults": "Nothing for \"{query}\" yet",
+    "noResultsHint": "Try another spelling — Darija doesn't have a standard one.",
+    "viewAll": "See all results"
+  },
+  "home": {
+    "stats": {
+      "words": "words",
+      "phrases": "phrases",
+      "categories": "categories"
+    },
+    "wordOfTheDay": "Word of the day",
+    "phraseOfTheDay": "Phrase of the day",
+    "browseByCategory": "Browse by category",
+    "browseByCategoryDesc": "33 categories, organized by daily life — from greetings to street slang.",
+    "essentials": "Start here",
+    "essentialsTitle": "Your first day words",
+    "essentialsDesc": "The words you need before you step out the door. Say them badly — Moroccans will love you for trying.",
+    "phrasebookEyebrow": "Phrasebook",
+    "phrasebookTitle": "Phrases that work",
+    "phrasebookDesc": "Not textbook Arabic. Real Darija — what people actually say in the taxi, at the souk, in the café.",
+    "wisdomEyebrow": "Hikma",
+    "wisdomTitle": "Moroccan wisdom",
+    "tapToExplore": "Tap any category to explore",
+    "roadTo": "Road to {target}"
+  },
+  "word": {
+    "back": "Dictionary",
+    "pronunciation": "Pronunciation",
+    "meaning": "Meaning",
+    "alsoWritten": "Also written",
+    "culturalNote": "Cultural note",
+    "examples": "In use",
+    "conjugation": "Conjugation",
+    "related": "Related",
+    "sameRoot": "Same root",
+    "seeAlso": "See also",
+    "playAudio": "Play pronunciation",
+    "audioComing": "Audio coming soon",
+    "copyArabizi": "Copy",
+    "copied": "Copied",
+    "share": "Share",
+    "category": "Category",
+    "partOfSpeech": "Part of speech",
+    "register": "Register",
+    "howToSayTitle": "How to say \"{english}\" in Moroccan Arabic",
+    "howToSayBody": "In Darija (Moroccan Arabic), \"{english}\" is {darija} ({arabic}), pronounced /{pronunciation}/."
+  },
+  "phrase": {
+    "literally": "Literally",
+    "theyReply": "They'll reply",
+    "useWhen": "Use when"
+  },
+  "category": {
+    "wordsCount": "{count} words",
+    "browseAll": "Browse all categories"
+  },
+  "footer": {
+    "tagline": "Moroccan Arabic for everyone. A living dictionary of Darija words, phrases, and the culture behind them.",
+    "explore": "Explore",
+    "learn": "Learn",
+    "network": "Network",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "disclaimer": "Disclaimer",
+    "poweredBy": "A {slow} project / Powered by {dwl}"
+  },
+  "language": {
+    "english": "English",
+    "french": "Français",
+    "switch": "Switch language"
+  }
+}

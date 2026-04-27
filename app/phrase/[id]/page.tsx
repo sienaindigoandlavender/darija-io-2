@@ -2,6 +2,8 @@ import { getPhraseById, getAllPhrases, getPhrasesByCategory } from '@/lib/dictio
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { getTranslations, getLocale } from 'next-intl/server';
+import AudioButton from '@/components/AudioButton';
 
 const SITE_URL = 'https://darija.io';
 
@@ -42,7 +44,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       siteName: 'Everyday Darija',
       images: [{ url: 'https://darija.io/og-image.jpg', width: 1200, height: 630, alt: 'Everyday Darija Dictionary' }],
     },
-    alternates: { canonical: `${SITE_URL}/phrase/${id}` },
+    alternates: {
+      canonical: `${SITE_URL}/phrase/${id}`,
+      languages: {
+        en: `${SITE_URL}/phrase/${id}`,
+        fr: `${SITE_URL}/phrase/${id}`,
+        'x-default': `${SITE_URL}/phrase/${id}`,
+      },
+    },
   };
 }
 
@@ -50,6 +59,11 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
   const { id } = await params;
   const phrase = await getPhraseById(id);
   if (!phrase) notFound();
+
+  const t = await getTranslations('phrase');
+  const locale = await getLocale();
+  const meaning = locale === 'fr' && phrase.french ? phrase.french : phrase.english;
+  const secondary = locale === 'fr' ? phrase.english : phrase.french;
 
   // Get related phrases from same category
   const categoryPhrases = await getPhrasesByCategory(phrase.category);
@@ -128,10 +142,13 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
             {phrase.arabic}
           </p>
 
-          {/* Darija transliteration */}
-          <h1 className="text-2xl md:text-3xl font-medium text-neutral-900 mb-2">
-            {phrase.darija}
-          </h1>
+          {/* Darija transliteration + audio */}
+          <div className="flex items-center gap-3 mb-2">
+            <h1 className="text-2xl md:text-3xl font-medium text-neutral-900">
+              {phrase.darija}
+            </h1>
+            <AudioButton src={phrase.audio_url} size="sm" />
+          </div>
 
           {/* Pronunciation */}
           <p className="text-lg text-neutral-500 mb-8 font-mono">
@@ -141,17 +158,23 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
           {/* Translations */}
           <div className="space-y-3 mb-8">
             <div className="flex items-baseline gap-3">
-              <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">EN</span>
-              <span className="text-lg text-neutral-900">{phrase.english}</span>
+              <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">
+                {locale === 'fr' ? 'FR' : 'EN'}
+              </span>
+              <span className="text-lg text-neutral-900">{meaning}</span>
             </div>
-            <div className="flex items-baseline gap-3">
-              <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">FR</span>
-              <span className="text-lg text-neutral-700">{phrase.french}</span>
-            </div>
+            {secondary && (
+              <div className="flex items-baseline gap-3">
+                <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">
+                  {locale === 'fr' ? 'EN' : 'FR'}
+                </span>
+                <span className="text-lg text-neutral-700">{secondary}</span>
+              </div>
+            )}
             {phrase.literal_translation && (
               <div className="flex items-baseline gap-3">
-                <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">LIT</span>
-                <span className="text-lg text-neutral-500 italic">{phrase.literal_translation}</span>
+                <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">{t('literally').slice(0, 3).toUpperCase()}</span>
+                <span className="text-lg text-neutral-500">{phrase.literal_translation}</span>
               </div>
             )}
           </div>
@@ -174,7 +197,7 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
           {/* Response */}
           {phrase.response && (
             <div className="border-l-2 border-neutral-200 pl-6 mb-8">
-              <p className="text-xs font-medium text-neutral-400 uppercase tracking-wide mb-2">Typical Response</p>
+              <p className="text-xs font-medium text-neutral-400 uppercase tracking-wide mb-2">{t('theyReply')}</p>
               <p className="text-xl text-neutral-900 mb-1" dir="rtl" lang="ar">{phrase.response.arabic}</p>
               <p className="text-lg text-neutral-700 mb-1">{phrase.response.darija}</p>
               <p className="text-neutral-500">{phrase.response.english}</p>
@@ -209,7 +232,7 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
                         {rp.darija}
                       </span>
                       <span className="text-neutral-400 mx-2">—</span>
-                      <span className="text-neutral-600">{rp.english}</span>
+                      <span className="text-neutral-600">{locale === 'fr' && rp.french ? rp.french : rp.english}</span>
                     </div>
                     <span className="text-neutral-300 text-sm shrink-0" dir="rtl">{rp.arabic}</span>
                   </div>

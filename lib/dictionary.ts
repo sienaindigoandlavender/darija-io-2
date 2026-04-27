@@ -26,6 +26,14 @@ export interface DarijaWord {
   related_words?: string[];
   tags: string[];
   order: number;
+
+  // ---- Phase 1 audio + linguistic scaffolding (optional, populated incrementally) ----
+  /** ElevenLabs (or other) MP3 URL. When present, the word page renders a play button. */
+  audio_url?: string;
+  /** Alternative Arabizi (Latin) spellings users might type — e.g. 'mzyan' / 'mezyen' / 'mzian'. */
+  arabizi_variants?: string[];
+  /** Triliteral/quadriliteral Arabic root, e.g. 'k-t-b'. Powers "same root" navigation. */
+  root?: string;
 }
 
 export interface DarijaPhrase {
@@ -43,6 +51,10 @@ export interface DarijaPhrase {
   response?: { darija: string; arabic: string; english: string };
   tags: string[];
   order: number;
+
+  // ---- Phase 1 audio scaffolding (optional) ----
+  audio_url?: string;
+  arabizi_variants?: string[];
 }
 
 const allWords: DarijaWord[] = wordsData as DarijaWord[];
@@ -62,6 +74,13 @@ export async function getWordsByCategory(category: string): Promise<DarijaWord[]
 
 export async function getWordsByTag(tag: string): Promise<DarijaWord[]> {
   return allWords.filter(w => w.tags?.includes(tag)).sort((a, b) => a.order - b.order);
+}
+
+export async function getWordsByRoot(root: string, excludeId?: string): Promise<DarijaWord[]> {
+  return allWords
+    .filter(w => w.root === root && w.id !== excludeId)
+    .sort((a, b) => a.order - b.order)
+    .slice(0, 8);
 }
 
 // ---- Fuzzy search ----
@@ -100,6 +119,15 @@ export async function searchWords(query: string): Promise<DarijaWord[]> {
         if (fl === q) { score = 100; break; }
         if (fl.startsWith(q)) score = Math.max(score, 90);
         if (fl.includes(q)) score = Math.max(score, 80);
+      }
+      // Match on Arabizi variants (alt spellings) — strong signal
+      if (score < 95 && w.arabizi_variants?.length) {
+        for (const v of w.arabizi_variants) {
+          const vl = v.toLowerCase();
+          if (vl === q) { score = Math.max(score, 95); break; }
+          if (vl.startsWith(q)) score = Math.max(score, 88);
+          if (vl.includes(q)) score = Math.max(score, 78);
+        }
       }
       if (score === 0) {
         const nd = normalizeDarija(w.darija);
