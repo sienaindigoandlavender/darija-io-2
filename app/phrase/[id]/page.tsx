@@ -42,7 +42,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       description,
       url: `${SITE_URL}/phrase/${id}`,
       siteName: 'Everyday Darija',
-      images: [{ url: 'https://darija.io/og-image.jpg', width: 1200, height: 630, alt: 'Everyday Darija Dictionary' }],
+      // images intentionally omitted — Next auto-uses opengraph-image.tsx
+      // in this segment, which generates a per-phrase card.
     },
     alternates: {
       canonical: `${SITE_URL}/phrase/${id}`,

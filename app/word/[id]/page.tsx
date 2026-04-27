@@ -30,7 +30,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       title,
       description,
       url,
-      images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: 'Everyday Darija Dictionary' }],
+      // images intentionally omitted — Next auto-uses opengraph-image.tsx
+      // in this segment, which generates a per-word card.
     },
     alternates: {
       canonical: url,
