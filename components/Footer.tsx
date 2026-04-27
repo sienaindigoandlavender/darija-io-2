@@ -47,6 +47,7 @@ export default function Footer() {
                 <li><a href="https://architectureofmorocco.com" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">Architecture of Morocco</a></li>
                 <li><a href="https://cuisinesofmorocco.com" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">Cuisines of Morocco</a></li>
                 <li><a href="https://derb.so" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">derb</a></li>
+                <li><a href="https://www.riaddisiena.com" target="_blank" rel="noopener noreferrer" className="text-xs text-white/90 hover:text-white transition-colors">Riad di Siena</a></li>
               </ul>
             </div>
           </div>
