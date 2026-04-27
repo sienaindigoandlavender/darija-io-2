@@ -166,6 +166,21 @@ export default async function WordPage({ params }: { params: { id: string } }) {
               {word.cultural_note ? ` ${word.cultural_note}` : ''}
               {' '}This term falls under the {word.category} category in Everyday Darija, the most comprehensive Moroccan Arabic dictionary online.
             </p>
+
+            {/* Ecosystem link */}
+            <div className="mt-12 pt-6 border-t border-neutral-200">
+              <p className="text-xs text-neutral-400">
+                Travelling to Morocco?{' '}
+                <a href="https://www.slowmorocco.com" target="_blank" rel="noopener noreferrer"
+                   className="underline hover:text-neutral-600 transition-colors">
+                  Slow Morocco
+                </a>{' '}and{' '}
+                <a href="https://derb.so" target="_blank" rel="noopener noreferrer"
+                   className="underline hover:text-neutral-600 transition-colors">
+                  Derb
+                </a>{' '}explain the context behind the words.
+              </p>
+            </div>
           </div>
         </section>
       </div>
