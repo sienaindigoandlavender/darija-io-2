@@ -19,7 +19,7 @@ export default async function FirstDaySection({ words }: Props) {
 
   return (
     <section
-      className="border-t border-neutral-100 px-6 md:px-[8%] lg:px-[12%] py-20 md:py-28"
+      className="border-t border-neutral-100 px-6 md:px-[8%] lg:px-[12%] py-14 md:py-28"
       aria-labelledby="first-day-heading"
     >
       <div className="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">

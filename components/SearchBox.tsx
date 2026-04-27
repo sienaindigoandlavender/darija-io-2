@@ -101,7 +101,7 @@ export default function SearchBox({ size = 'hero', autoFocus = false, examples }
 
   const inputBase = 'w-full bg-transparent outline-none transition-colors placeholder:font-display';
   const inputSize = size === 'hero'
-    ? 'pb-4 text-xl md:text-2xl border-b-2 border-neutral-200 focus:border-[#c53a1a] font-display placeholder:text-neutral-400'
+    ? 'py-3 md:pt-0 md:pb-4 text-xl md:text-2xl border-b-2 border-neutral-200 focus:border-[#c53a1a] font-display placeholder:text-neutral-400'
     : 'py-3 px-4 text-base border border-neutral-200 rounded-lg focus:border-[#c53a1a] font-display placeholder:text-neutral-400';
 
   const showDropdown = isOpen && query.trim().length > 0;
@@ -135,7 +135,7 @@ export default function SearchBox({ size = 'hero', autoFocus = false, examples }
               inputRef.current?.focus();
             }}
             aria-label="Clear"
-            className="absolute right-0 bottom-4 text-neutral-400 hover:text-black"
+            className="absolute right-0 inset-y-0 my-auto h-11 w-11 inline-flex items-center justify-center text-neutral-400 hover:text-black"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -184,7 +184,7 @@ export default function SearchBox({ size = 'hero', autoFocus = false, examples }
                   <Link
                     href={`/word/${w.id}`}
                     onMouseEnter={() => setActiveIdx(i)}
-                    className={`flex items-baseline justify-between gap-4 px-5 py-3 transition-colors ${
+                    className={`flex items-baseline justify-between gap-4 px-5 py-3.5 transition-colors min-h-[44px] ${
                       activeIdx === i ? 'bg-neutral-50' : 'hover:bg-neutral-50'
                     }`}
                   >
@@ -208,7 +208,7 @@ export default function SearchBox({ size = 'hero', autoFocus = false, examples }
                     <Link
                       href={`/phrase/${p.id}`}
                       onMouseEnter={() => setActiveIdx(idx)}
-                      className={`flex flex-col gap-0.5 px-5 py-3 transition-colors ${
+                      className={`flex flex-col gap-0.5 px-5 py-3 transition-colors min-h-[44px] ${
                         activeIdx === idx ? 'bg-neutral-50' : 'hover:bg-neutral-50'
                       }`}
                     >

@@ -16,7 +16,7 @@ export default async function HomeHero() {
 
   return (
     <section
-      className="relative px-6 md:px-[8%] lg:px-[12%] pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden"
+      className="relative px-6 md:px-[8%] lg:px-[12%] pt-24 md:pt-40 pb-12 md:pb-28 overflow-hidden"
       aria-labelledby="home-h1"
     >
       {/* One subtle Arabic ornament — bottom-right, far from search box */}
@@ -30,18 +30,18 @@ export default async function HomeHero() {
       </div>
 
       <div className="relative z-10 max-w-5xl">
-        <p className="text-[#c53a1a] text-[11px] md:text-xs font-medium uppercase tracking-[0.3em] mb-6">
+        <p className="text-[#c53a1a] text-[11px] md:text-xs font-medium uppercase tracking-[0.3em] mb-4 md:mb-6">
           {t('site.name')}
         </p>
 
         <h1
           id="home-h1"
-          className="font-display text-[clamp(2.75rem,8vw,7rem)] leading-[0.9] tracking-tight mb-6"
+          className="font-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] md:leading-[0.9] tracking-tight mb-4 md:mb-6"
         >
           {t('site.tagline')}
         </h1>
 
-        <p className="text-neutral-600 text-lg md:text-xl max-w-2xl mb-12 md:mb-16 leading-relaxed">
+        <p className="text-neutral-600 text-base md:text-xl max-w-2xl mb-8 md:mb-16 leading-relaxed">
           {t('site.description')}
         </p>
 

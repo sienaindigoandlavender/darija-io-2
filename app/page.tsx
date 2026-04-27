@@ -14,6 +14,7 @@ import CategoryGrid from './_home/CategoryGrid';
 import FirstDaySection from './_home/FirstDaySection';
 import PhrasebookSection from './_home/PhrasebookSection';
 import WisdomSection from './_home/WisdomSection';
+import RecentlyViewed from '@/components/RecentlyViewed';
 import { dayIndex, pickByDay } from './_home/util';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -63,6 +64,7 @@ export default async function HomePage() {
   return (
     <>
       <HomeHero />
+      <RecentlyViewed />
       {wotd && <WordOfTheDay word={wotd} />}
       <CategoryGrid wordCategories={wordCategories} phraseCategories={phraseCategories} />
       <FirstDaySection words={firstDayPicks} />

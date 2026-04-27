@@ -15,7 +15,7 @@ export default async function PhrasebookSection({ phrases }: Props) {
 
   return (
     <section
-      className="bg-neutral-50/60 border-t border-neutral-100 px-6 md:px-[8%] lg:px-[12%] py-20 md:py-28"
+      className="bg-neutral-50/60 border-t border-neutral-100 px-6 md:px-[8%] lg:px-[12%] py-14 md:py-28"
       aria-labelledby="phrasebook-heading"
     >
       <div className="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
