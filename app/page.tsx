@@ -6,7 +6,6 @@ import {
   getProverbs,
   getWordCategories,
   getPhraseCategories,
-  getMetadata,
   getPhrasesByCategory,
 } from '@/lib/dictionary';
 import HomeHero from './_home/HomeHero';
@@ -41,14 +40,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function HomePage() {
   // All data fetched server-side — no client API calls on first paint
-  const [allWords, essentials, proverbs, wordCategories, phraseCategories, meta, survivalPhrases] =
+  const [allWords, essentials, proverbs, wordCategories, phraseCategories, survivalPhrases] =
     await Promise.all([
       getAllWords(),
       getWordsByTag('essential'),
       getProverbs(),
       getWordCategories(),
       getPhraseCategories(),
-      getMetadata(),
       getPhrasesByCategory('survival'),
     ]);
 
@@ -64,7 +62,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <HomeHero stats={meta} />
+      <HomeHero />
       {wotd && <WordOfTheDay word={wotd} />}
       <CategoryGrid wordCategories={wordCategories} phraseCategories={phraseCategories} />
       <FirstDaySection words={firstDayPicks} />
