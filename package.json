@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.95.3",
+    "arabic-persian-reshaper": "^1.0.1",
     "next": "14.2.35",
     "next-intl": "^4.9.2",
     "react": "^18",
