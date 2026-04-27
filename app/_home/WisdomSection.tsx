@@ -15,7 +15,7 @@ export default async function WisdomSection({ proverbs }: Props) {
 
   return (
     <section
-      className="relative px-6 md:px-[8%] lg:px-[12%] py-24 md:py-32 bg-neutral-900 text-white overflow-hidden"
+      className="relative px-6 md:px-[8%] lg:px-[12%] py-16 md:py-32 bg-neutral-900 text-white overflow-hidden"
       aria-labelledby="wisdom-heading"
     >
       <div

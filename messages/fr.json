@@ -14,7 +14,7 @@
   },
   "search": {
     "label": "Rechercher",
-    "placeholder": "Cherchez en darija, anglais, français — ou arabizi (mzyan, shukran…)",
+    "placeholder": "Cherchez en darija, anglais, français…",
     "shortPlaceholder": "Rechercher",
     "tryLabel": "Essayez",
     "examples": ["mzyan", "shukran", "combien", "inchallah", "labas"],
@@ -31,6 +31,7 @@
       "categories": "catégories"
     },
     "wordOfTheDay": "Mot du jour",
+    "recentlyViewed": "Vus récemment",
     "phraseOfTheDay": "Phrase du jour",
     "browseByCategory": "Parcourir par catégorie",
     "browseByCategoryDesc": "33 catégories, classées par vie quotidienne — des salutations à l'argot de rue.",
@@ -80,7 +81,6 @@
     "tagline": "L'arabe marocain pour tous. Un dictionnaire vivant des mots, phrases et culture darija.",
     "explore": "Explorer",
     "learn": "Apprendre",
-    "network": "Réseau",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "disclaimer": "Mentions légales",

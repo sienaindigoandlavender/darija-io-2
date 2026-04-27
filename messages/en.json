@@ -14,7 +14,7 @@
   },
   "search": {
     "label": "Search",
-    "placeholder": "Search Darija, English, French — or Arabizi (mzyan, shukran…)",
+    "placeholder": "Search Darija, English, French…",
     "shortPlaceholder": "Search",
     "tryLabel": "Try",
     "examples": ["mzyan", "shukran", "how much", "inshallah", "labas"],
@@ -31,6 +31,7 @@
       "categories": "categories"
     },
     "wordOfTheDay": "Word of the day",
+    "recentlyViewed": "Recently viewed",
     "phraseOfTheDay": "Phrase of the day",
     "browseByCategory": "Browse by category",
     "browseByCategoryDesc": "33 categories, organized by daily life — from greetings to street slang.",
@@ -80,7 +81,6 @@
     "tagline": "Moroccan Arabic for everyone. A living dictionary of Darija words, phrases, and the culture behind them.",
     "explore": "Explore",
     "learn": "Learn",
-    "network": "Network",
     "privacy": "Privacy",
     "terms": "Terms",
     "disclaimer": "Disclaimer",

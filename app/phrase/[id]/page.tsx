@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getTranslations, getLocale } from 'next-intl/server';
 import AudioButton from '@/components/AudioButton';
+import RecentTracker from '@/components/RecentTracker';
 
 const SITE_URL = 'https://darija.io';
 
@@ -125,6 +126,7 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      <RecentTracker kind="phrase" id={phrase.id} label={phrase.darija} sub={meaning} />
 
       <div className="max-w-2xl mx-auto px-6 py-12">
         {/* Breadcrumb */}
