@@ -179,7 +179,11 @@ export default async function AboutPage() {
             <div className="md:col-span-7 md:col-start-6 space-y-6 text-neutral-900 text-lg leading-relaxed">
               <p>
                 Darija (الدارجة) is Moroccan Arabic — a spoken language that evolved over centuries from Classical
-                Arabic, reshaped by Amazigh grammar, saturated with French and Spanish vocabulary, and spoken
+                Arabic, reshaped by{' '}
+                <a href="https://tamazight.io" className="underline decoration-dotted underline-offset-4 hover:text-[#c53a1a]">
+                  Amazigh grammar
+                </a>
+                , saturated with French and Spanish vocabulary, and spoken
                 daily by every Moroccan from the king to the farmer.
               </p>
               <p>

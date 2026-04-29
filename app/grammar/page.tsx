@@ -243,7 +243,7 @@ export default function GrammarPage() {
 
           <div className="mt-16 border-l-2 border-[#d4931a]/40 pl-6 max-w-2xl">
             <p className="text-[#d4931a] text-xs uppercase tracking-[0.2em] mb-2">Cultural note</p>
-            <p className="text-white/50 leading-relaxed">The ma...sh sandwich comes from Amazigh substrate influence. It&rsquo;s what makes Darija sound nothing like Standard Arabic. When you hear it, you know you&rsquo;re in Morocco.</p>
+            <p className="text-white/50 leading-relaxed">The ma...sh sandwich comes from <a href="https://tamazight.io/grammar#negation" className="underline decoration-dotted underline-offset-4 hover:text-white">Amazigh substrate influence</a> — Tamazight uses the same circumfix pattern (ur…ara). It&rsquo;s what makes Darija sound nothing like Standard Arabic. When you hear it, you know you&rsquo;re in Morocco.</p>
           </div>
         </section>
 
