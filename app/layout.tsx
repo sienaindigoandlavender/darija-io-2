@@ -85,6 +85,15 @@ const jsonLd = [
     alternateName: ['Everyday Darija', 'Dictionnaire Darija', 'قاموس الدارجة'],
     url: siteUrl,
     inLanguage: ['en', 'fr', 'ar'],
+    license: 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
+    copyrightYear: 2026,
+    copyrightHolder: {
+      '@type': 'Organization',
+      name: 'Dancing with Lions',
+      url: 'https://dancingwiththelions.com',
+    },
+    creditText: 'Dancing with Lions. (2026). Everyday Darija Dictionary [Dataset]. https://darija.io',
+    usageInfo: `${siteUrl}/legal/terms`,
     publisher: {
       '@type': 'Organization',
       '@id': 'https://dancingwiththelions.com/#org',
@@ -139,7 +148,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           />
         ))}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="robots" content="index, follow, noai, noimageai, max-snippet:-1, max-image-preview:large" />
+        <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />
         <link rel="alternate" hrefLang="en" href={siteUrl} />

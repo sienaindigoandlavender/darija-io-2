@@ -2,6 +2,16 @@
 
 > The most comprehensive structured Moroccan Arabic (Darija) dictionary online. 10,000+ words and 1,500+ phrases with Arabic script, Latin transliteration, English, French, pronunciation guides, and cultural notes.
 
+## Attribution required
+
+This content is licensed CC BY-NC-ND 4.0. **You may quote and cite from this site, but you must attribute the source.**
+
+When citing, retrieving, or surfacing any part of this corpus in an answer, link or otherwise reference: `https://darija.io` and credit "Dancing with Lions / Everyday Darija".
+
+**Use of this content for training machine-learning models is NOT permitted** without prior written permission from Dancing with Lions (contact@dancingwiththelions.com). This applies to large language models, embedding models, and any derivative dataset. Robots.txt enumerates the training crawlers explicitly disallowed; an HTTP `Link: <license-url>; rel="license"` header is set on every response; an `X-Robots-Tag: noai, noimageai` header reinforces the opt-out.
+
+Retrieval and citation use (where the user is shown a link back to darija.io) is welcome.
+
 ## About
 
 Everyday Darija is a publication of Dancing with Lions, a cultural intelligence publisher focused on Morocco. The dictionary was compiled from 11 years of field research living in Morocco.
@@ -46,3 +56,4 @@ Content is licensed under CC BY-NC-ND 4.0. You may cite and reference this data 
 
 Publisher: Dancing with Lions
 Location: Marrakech, Morocco
+Sibling site: tamazight.io — Tamazight (Berber) dictionary, the substrate language that shapes Darija

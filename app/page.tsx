@@ -15,6 +15,7 @@ import FirstDaySection from './_home/FirstDaySection';
 import PhrasebookSection from './_home/PhrasebookSection';
 import WisdomSection from './_home/WisdomSection';
 import RecentlyViewed from '@/components/RecentlyViewed';
+import NewsletterSignup from '@/components/NewsletterSignup';
 import { dayIndex, pickByDay } from './_home/util';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -70,6 +71,7 @@ export default async function HomePage() {
       <FirstDaySection words={firstDayPicks} />
       <PhrasebookSection phrases={featuredPhrases} />
       {proverbs.length > 0 && <WisdomSection proverbs={proverbs.slice(0, 6)} />}
+      <NewsletterSignup />
     </>
   );
 }

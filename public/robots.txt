@@ -1,52 +1,114 @@
-# Darija Dictionary by Dancing with Lions
-# https://darija.io — The definitive Moroccan Arabic (Darija) reference
+# darija.io — Moroccan Arabic Dictionary
+# A Dancing with Lions publication
+#
+# Content on this site is licensed under CC BY-NC-ND 4.0
+# (https://creativecommons.org/licenses/by-nc-nd/4.0/).
+# Attribution is required for all uses, including AI/LLM citation.
+# Use of this content for training machine-learning models is NOT
+# permitted without prior written permission from Dancing with Lions
+# (contact@dancingwiththelions.com).
 
+# Default — humans, traditional search
 User-agent: *
-Allow: /api/knowledge/
-Disallow: /api/
+Allow: /
+Disallow: /api/contact
+Disallow: /api/subscribe
+
+# Retrieval / citation crawlers — welcome
+# (these visit on demand and link the user back to the source)
 
 User-agent: Googlebot
-Allow: /api/knowledge/
-Disallow: /api/
-
-User-agent: GPTBot
 Allow: /
-Allow: /api/knowledge/
-
-User-agent: ChatGPT-User
-Allow: /
-Allow: /api/knowledge/
-
-User-agent: OAI-SearchBot
-Allow: /
-Allow: /api/knowledge/
-
-User-agent: Google-Extended
-Allow: /
-Allow: /api/knowledge/
-
-User-agent: Anthropic-AI
-Allow: /
-Allow: /api/knowledge/
-
-User-agent: ClaudeBot
-Allow: /
-Allow: /api/knowledge/
-
-User-agent: Claude-Web
-Allow: /
-Allow: /api/knowledge/
-
-User-agent: CCBot
-Allow: /
-Allow: /api/knowledge/
-
-User-agent: PerplexityBot
-Allow: /
-Allow: /api/knowledge/
 
 User-agent: Bingbot
 Allow: /
-Allow: /api/knowledge/
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Training crawlers — disallowed under CC BY-NC-ND 4.0
+# These ingest content for model weights without per-query attribution.
+# Training use of this content requires written permission.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Anthropic-AI
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
 
 Sitemap: https://darija.io/sitemap.xml
