@@ -13,6 +13,16 @@
     "about": "À propos",
     "language": "Langue"
   },
+  "newsletter": {
+    "eyebrow": "Restons en contact",
+    "headline": "Un mot par semaine.<br />Rien d'autre.",
+    "placeholder": "vous@exemple.com",
+    "emailLabel": "Votre adresse e-mail",
+    "subscribe": "S'abonner",
+    "privacy": "Une courte lettre le dimanche. Désinscription en un clic. Pas de tracking, pas de funnel.",
+    "thanks": "Merci. À la semaine prochaine.",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  },
   "search": {
     "label": "Rechercher",
     "placeholder": "Cherchez en darija, anglais, français…",

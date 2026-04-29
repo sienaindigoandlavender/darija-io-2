@@ -13,6 +13,16 @@
     "about": "About",
     "language": "Language"
   },
+  "newsletter": {
+    "eyebrow": "Stay in touch",
+    "headline": "One word a week.<br />Nothing else.",
+    "placeholder": "you@example.com",
+    "emailLabel": "Your email address",
+    "subscribe": "Subscribe",
+    "privacy": "A short letter on Sundays. Unsubscribe in one click. No tracking, no funnel.",
+    "thanks": "Thanks. See you next week.",
+    "error": "Something went wrong. Please try again."
+  },
   "search": {
     "label": "Search",
     "placeholder": "Search Darija, English, French…",
