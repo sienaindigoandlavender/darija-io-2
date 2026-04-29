@@ -22,8 +22,9 @@ export default async function SiteHeader() {
         <nav className="hidden md:flex items-center gap-7 text-xs uppercase tracking-widest">
           <Link href="/" className="text-neutral-700 hover:text-black transition-colors">{tNav('dictionary')}</Link>
           <Link href="/first-day" className="text-neutral-700 hover:text-black transition-colors">{tNav('firstDay')}</Link>
+          <Link href="/practice" className="text-neutral-700 hover:text-black transition-colors">{tNav('practice')}</Link>
           <Link href="/grammar" className="text-neutral-700 hover:text-black transition-colors">{tNav('grammar')}</Link>
-          <Link href="/about" className="text-neutral-700 hover:text-black transition-colors">{tNav('about')}</Link>
+          <Link href="/how-to-say" className="text-neutral-700 hover:text-black transition-colors">{tNav('phrases')}</Link>
         </nav>
 
         <div className="flex items-center gap-2 md:gap-4">
