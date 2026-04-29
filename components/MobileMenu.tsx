@@ -72,25 +72,25 @@ export default function MobileMenu() {
           <nav className="px-6 pt-4 pb-10 flex flex-col">
             <Link
               href="/"
-              className="py-4 text-2xl font-display tracking-tight text-neutral-900 border-b border-neutral-100"
+              className="py-4 text-sm uppercase tracking-widest text-neutral-900 border-b border-neutral-100"
             >
               {tNav('dictionary')}
             </Link>
             <Link
               href="/first-day"
-              className="py-4 text-2xl font-display tracking-tight text-neutral-900 border-b border-neutral-100"
+              className="py-4 text-sm uppercase tracking-widest text-neutral-900 border-b border-neutral-100"
             >
               {tNav('firstDay')}
             </Link>
             <Link
               href="/grammar"
-              className="py-4 text-2xl font-display tracking-tight text-neutral-900 border-b border-neutral-100"
+              className="py-4 text-sm uppercase tracking-widest text-neutral-900 border-b border-neutral-100"
             >
               {tNav('grammar')}
             </Link>
             <Link
               href="/about"
-              className="py-4 text-2xl font-display tracking-tight text-neutral-900 border-b border-neutral-100"
+              className="py-4 text-sm uppercase tracking-widest text-neutral-900 border-b border-neutral-100"
             >
               {tNav('about')}
             </Link>
