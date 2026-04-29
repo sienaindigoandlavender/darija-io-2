@@ -118,6 +118,7 @@ export async function generateMetadata({ params }: { params: { term: string } })
   const term = unslugTerm(params.term);
   const words = await searchWords(term);
   const top = words[0];
+  const isEmpty = words.length === 0;
   const title = top
     ? `How to Say "${capitalize(term)}" in Moroccan Arabic — ${top.darija}`
     : `How to Say "${capitalize(term)}" in Moroccan Arabic`;
@@ -128,6 +129,7 @@ export async function generateMetadata({ params }: { params: { term: string } })
   return {
     title,
     description,
+    robots: isEmpty ? { index: false, follow: true } : undefined,
     openGraph: { title, description, url },
     alternates: {
       canonical: url,

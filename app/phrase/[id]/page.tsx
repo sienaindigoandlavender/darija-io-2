@@ -32,12 +32,21 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const phrase = await getPhraseById(id);
   if (!phrase) return { title: 'Phrase Not Found' };
 
+  const isThin =
+    !phrase.cultural_note &&
+    !phrase.response &&
+    !phrase.audio_url &&
+    !(phrase.tags || []).some((t: string) =>
+      ['essential', 'first-day', 'common', 'survival'].includes(t)
+    );
+
   const title = `"${phrase.english}" in Moroccan Arabic — ${phrase.darija}`;
   const description = `How to say "${phrase.english}" in Darija: ${phrase.darija} (${phrase.arabic}). Pronounced /${phrase.pronunciation}/. ${phrase.french ? `French: ${phrase.french}.` : ''} ${phrase.cultural_note ? phrase.cultural_note.slice(0, 100) : ''}`.trim();
 
   return {
     title,
     description,
+    robots: isThin ? { index: false, follow: true } : undefined,
     openGraph: {
       title: `${phrase.darija} — ${phrase.english} | Darija Phrase`,
       description,
