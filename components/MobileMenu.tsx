@@ -83,14 +83,26 @@ export default function MobileMenu() {
               {tNav('firstDay')}
             </Link>
             <Link
+              href="/practice"
+              className="py-4 text-sm uppercase tracking-widest text-neutral-900 border-b border-neutral-100"
+            >
+              {tNav('practice')}
+            </Link>
+            <Link
               href="/grammar"
               className="py-4 text-sm uppercase tracking-widest text-neutral-900 border-b border-neutral-100"
             >
               {tNav('grammar')}
             </Link>
             <Link
-              href="/about"
+              href="/how-to-say"
               className="py-4 text-sm uppercase tracking-widest text-neutral-900 border-b border-neutral-100"
+            >
+              {tNav('phrases')}
+            </Link>
+            <Link
+              href="/about"
+              className="py-4 text-xs uppercase tracking-widest text-neutral-500 mt-4"
             >
               {tNav('about')}
             </Link>
