@@ -25,6 +25,16 @@ export default function Footer() {
               <div className="mt-5">
                 <LocaleSwitcher subtle />
               </div>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-5">
+                Sibling site
+              </p>
+              <a
+                href="https://tamazight.io"
+                rel="noopener"
+                className="text-xs text-white/85 hover:text-white transition-colors mt-1 inline-block"
+              >
+                tamazight.io <span className="text-white/40">— Berber dictionary</span>
+              </a>
             </div>
 
             {/* Explore */}
