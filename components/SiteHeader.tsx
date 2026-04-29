@@ -19,7 +19,7 @@ export default async function SiteHeader() {
           <span className="font-display text-base tracking-tight">darija.io</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-7 text-sm">
+        <nav className="hidden md:flex items-center gap-7 text-xs uppercase tracking-widest">
           <Link href="/" className="text-neutral-700 hover:text-black transition-colors">{tNav('dictionary')}</Link>
           <Link href="/first-day" className="text-neutral-700 hover:text-black transition-colors">{tNav('firstDay')}</Link>
           <Link href="/grammar" className="text-neutral-700 hover:text-black transition-colors">{tNav('grammar')}</Link>
