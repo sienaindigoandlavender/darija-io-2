@@ -17,6 +17,14 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   const word = await getWordById(params.id);
   if (!word) return { title: 'Word Not Found' };
 
+  const isThin =
+    !word.cultural_note &&
+    (!word.examples || word.examples.length === 0) &&
+    !word.audio_url &&
+    !(word.tags || []).some((t: string) =>
+      ['essential', 'first-day', 'common', 'basic', 'survival'].includes(t)
+    );
+
   const locale = await getLocale();
   const meaning = locale === 'fr' && word.french ? word.french : word.english;
 
@@ -27,6 +35,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   return {
     title,
     description,
+    robots: isThin ? { index: false, follow: true } : undefined,
     openGraph: {
       title,
       description,
