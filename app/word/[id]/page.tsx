@@ -100,24 +100,33 @@ export default async function WordPage({ params }: { params: { id: string } }) {
     };
   }
 
-  // FAQ schema for "how do you say X in Darija"
-  const faqLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [{
-      '@type': 'Question',
-      name: `How do you say "${word.english}" in Moroccan Arabic (Darija)?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `In Darija (Moroccan Arabic), "${word.english}" is "${word.darija}" (${word.arabic}), pronounced /${word.pronunciation}/.${word.french ? ` In French: ${word.french}.` : ''}${word.cultural_note ? ` ${word.cultural_note}` : ''}`,
-      },
-    }],
-  };
+  // FAQ schema for "how do you say X in Darija" — only emitted when we
+  // have real Q&A content (gate prevents empty FAQPage from reaching GSC).
+  const faqQuestions = word.english
+    ? [{
+        '@type': 'Question' as const,
+        name: `How do you say "${word.english}" in Moroccan Arabic (Darija)?`,
+        acceptedAnswer: {
+          '@type': 'Answer' as const,
+          text: `In Darija (Moroccan Arabic), "${word.english}" is "${word.darija}" (${word.arabic}), pronounced /${word.pronunciation}/.${word.french ? ` In French: ${word.french}.` : ''}${word.cultural_note ? ` ${word.cultural_note}` : ''}`,
+        },
+      }]
+    : [];
+
+  const faqLd = faqQuestions.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqQuestions,
+      }
+    : null;
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      {faqLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      )}
       <RecentTracker kind="word" id={word.id} label={word.darija} sub={meaning} />
 
       <div className="min-h-screen">

@@ -165,22 +165,28 @@ export default async function HowToSayPage({ params }: { params: { term: string 
       ? `In Darija, "${termLabel}" is ${words[0].darija} (${words[0].arabic}), pronounced /${words[0].pronunciation}/.`
       : '');
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: words.slice(0, 5).map(w => ({
-      '@type': 'Question',
-      name: `How do you say "${w.english}" in Moroccan Arabic?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `In Darija (Moroccan Arabic), "${w.english}" is "${w.darija}" (${w.arabic}), pronounced /${w.pronunciation}/.${w.cultural_note ? ' ' + w.cultural_note : ''}`,
-      },
-    })),
-  };
+  const faqQuestions = words.slice(0, 5).map(w => ({
+    '@type': 'Question' as const,
+    name: `How do you say "${w.english}" in Moroccan Arabic?`,
+    acceptedAnswer: {
+      '@type': 'Answer' as const,
+      text: `In Darija (Moroccan Arabic), "${w.english}" is "${w.darija}" (${w.arabic}), pronounced /${w.pronunciation}/.${w.cultural_note ? ' ' + w.cultural_note : ''}`,
+    },
+  }));
+
+  const jsonLd = faqQuestions.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqQuestions,
+      }
+    : null;
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {jsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      )}
       <HowToSayClient
         term={termLabel}
         words={words}
