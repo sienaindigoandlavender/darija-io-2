@@ -108,33 +108,39 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
     // FAQPage for rich results
   };
 
-  const faqLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `How do you say "${phrase.english}" in Moroccan Arabic?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `"${phrase.english}" in Moroccan Arabic (Darija) is "${phrase.darija}" (${phrase.arabic}), pronounced /${phrase.pronunciation}/.${phrase.french ? ` In French: "${phrase.french}".` : ''}${phrase.cultural_note ? ` ${phrase.cultural_note}` : ''}`,
-        },
+  const faqQuestions = [
+    ...(phrase.english ? [{
+      '@type': 'Question' as const,
+      name: `How do you say "${phrase.english}" in Moroccan Arabic?`,
+      acceptedAnswer: {
+        '@type': 'Answer' as const,
+        text: `"${phrase.english}" in Moroccan Arabic (Darija) is "${phrase.darija}" (${phrase.arabic}), pronounced /${phrase.pronunciation}/.${phrase.french ? ` In French: "${phrase.french}".` : ''}${phrase.cultural_note ? ` ${phrase.cultural_note}` : ''}`,
       },
-      ...(phrase.response ? [{
-        '@type': 'Question',
-        name: `What is the typical response to "${phrase.darija}" in Darija?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `The typical response is "${phrase.response.darija}" (${phrase.response.arabic}), which means "${phrase.response.english}".`,
-        },
-      }] : []),
-    ],
-  };
+    }] : []),
+    ...(phrase.response ? [{
+      '@type': 'Question' as const,
+      name: `What is the typical response to "${phrase.darija}" in Darija?`,
+      acceptedAnswer: {
+        '@type': 'Answer' as const,
+        text: `The typical response is "${phrase.response.darija}" (${phrase.response.arabic}), which means "${phrase.response.english}".`,
+      },
+    }] : []),
+  ];
+
+  const faqLd = faqQuestions.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqQuestions,
+      }
+    : null;
 
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      {faqLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      )}
       <RecentTracker kind="phrase" id={phrase.id} label={phrase.darija} sub={meaning} />
 
       <div className="max-w-2xl mx-auto px-6 py-12">
