@@ -18,6 +18,9 @@ const nextConfig = {
       // dharija.space legacy paths
       { source: '/darija', destination: '/', permanent: true },
       { source: '/darija/:path*', destination: '/', permanent: true },
+
+      // Low-quality how-to-say page that generated nonsensical queries
+      { source: '/how-to-say/arabic', destination: '/', permanent: true },
     ];
   },
 };

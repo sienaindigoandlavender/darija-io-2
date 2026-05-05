@@ -20,7 +20,7 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
   time: { title: 'Time, Days & Calendar in Darija', description: 'Days of the week, months, seasons, telling time, and temporal expressions in Moroccan Arabic.' },
   nature: { title: 'Nature & Weather in Darija', description: 'Mountains, desert, sea, forests, weather — the natural vocabulary of Morocco\'s diverse landscapes.' },
   culture: { title: 'Moroccan Culture Words in Darija', description: 'Hshuma, niya, mktub, baraka — the untranslatable cultural concepts that define Moroccan society.' },
-  slang: { title: 'Moroccan Street Slang', description: 'The Darija nobody teaches you in class — street expressions, youth slang, and the words that make Moroccans laugh.' },
+  slang: { title: 'Darija Slang — Sir Tqwd, Zwina & More | Meanings in English', description: 'Moroccan Darija slang words explained in English. Includes "sir tqwd" (go away/get lost), street expressions, and everyday slang with meanings.' },
   health: { title: 'Health & Body in Darija', description: 'Medical vocabulary, body parts, pharmacy phrases, and how to describe symptoms in Moroccan Arabic.' },
   money: { title: 'Money & Banking in Darija', description: 'Dirhams, ryals, change, tips, ATMs — the financial vocabulary of daily Moroccan transactions.' },
   directions: { title: 'Directions in Darija', description: 'Left, right, straight, near, far — navigate Moroccan cities and medinas in Darija.' },
@@ -61,6 +61,25 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
+// Words pinned to the top of specific category pages so high-intent queries
+// land on visible content instead of a buried entry.
+const FEATURED_BY_CATEGORY: Record<string, { darija: string; arabic: string; english: string; note: string }[]> = {
+  slang: [
+    {
+      darija: 'sir tqwd',
+      arabic: 'سير تقاود',
+      english: 'go away / get lost',
+      note: '"Sir tqwd" literally means "go and walk straight" but is used as a dismissive "get lost" or "go away" between friends. Edge of rude — fine among peers, not for strangers or elders.',
+    },
+    {
+      darija: 'zwina',
+      arabic: 'زوينة',
+      english: 'beautiful / nice (feminine)',
+      note: '"Zwina" is the feminine of "zwin" — an everyday compliment for people, food, or anything pleasant. Hear it dozens of times a day in any Moroccan city.',
+    },
+  ],
+};
+
 export default async function CategoryPage({ params }: { params: { slug: string } }) {
   const [words, categories, locale] = await Promise.all([
     getWordsByCategory(params.slug),
@@ -69,6 +88,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
   ]);
   const current = categories.find(c => c.id === params.slug);
   const meta = CATEGORY_META[params.slug];
+  const featured = FEATURED_BY_CATEGORY[params.slug];
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -87,6 +107,23 @@ export default async function CategoryPage({ params }: { params: { slug: string 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {featured && featured.length > 0 && (
+        <section className="px-8 md:px-[8%] lg:px-[12%] pt-20 pb-8">
+          <p className="text-[#c53a1a] text-xs font-medium uppercase tracking-[0.3em] mb-6">Featured</p>
+          <div className="space-y-8 max-w-3xl">
+            {featured.map(f => (
+              <div key={f.darija} className="border-l-2 border-[#d4931a] pl-6">
+                <div className="flex items-baseline gap-4 flex-wrap mb-2">
+                  <span className="font-arabic text-3xl text-[#c53a1a]">{f.arabic}</span>
+                  <span className="font-display text-2xl">{f.darija}</span>
+                  <span className="text-neutral-900">— {f.english}</span>
+                </div>
+                <p className="text-neutral-500 leading-relaxed">{f.note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
       <CategoryClient
         words={words}
         categories={categories}
