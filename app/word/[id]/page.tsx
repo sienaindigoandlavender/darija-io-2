@@ -8,6 +8,11 @@ import RecentTracker from '@/components/RecentTracker';
 
 const SITE_URL = 'https://darija.io';
 
+// Per-id title overrides (uses absolute title to bypass the global template).
+const WORD_TITLE_OVERRIDES: Record<string, string> = {
+  'verbs-00900': 'T3awn — "To Help" in Moroccan Darija | darija.io',
+};
+
 export async function generateStaticParams() {
   const words = await getAllWords();
   return words.map(w => ({ id: w.id }));
@@ -28,16 +33,17 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   const locale = await getLocale();
   const meaning = locale === 'fr' && word.french ? word.french : word.english;
 
+  const overrideTitle = WORD_TITLE_OVERRIDES[params.id];
   const title = `${word.darija} (${word.arabic}) — ${meaning} in Darija`;
   const description = `How to say "${word.english}" in Moroccan Arabic: ${word.darija} (${word.arabic}). Pronounced /${word.pronunciation}/. ${word.french ? `French: ${word.french}.` : ''} ${word.cultural_note ? word.cultural_note.slice(0, 120) : ''}`;
   const url = `${SITE_URL}/word/${word.id}`;
 
   return {
-    title,
+    title: overrideTitle ? { absolute: overrideTitle } : title,
     description,
     robots: isThin ? { index: false, follow: true } : undefined,
     openGraph: {
-      title,
+      title: overrideTitle || title,
       description,
       url,
       // images intentionally omitted — Next auto-uses opengraph-image.tsx

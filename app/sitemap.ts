@@ -72,6 +72,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     });
   }
+  // Manually-added Darija-form slugs that wouldn't be produced by slugifying the
+  // English headword (e.g. "bara" instead of "outside-away").
+  for (const slug of ['bara', 'wahed-nhar']) {
+    if (seenSlugs.has(slug)) continue;
+    seenSlugs.add(slug);
+    howToSayPages.push({
+      url: `${SITE_URL}/how-to-say/${slug}`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    });
+  }
 
   const wordCategories = [
     'greetings', 'food', 'shopping', 'transport', 'home', 'emotions', 'time',

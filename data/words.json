@@ -143175,5 +143175,41 @@
     "examples": [],
     "tags": [],
     "order": 10000
+  },
+  {
+    "id": "directions-10001",
+    "darija": "bara",
+    "arabic": "برا",
+    "english": "outside / away",
+    "french": "dehors",
+    "pronunciation": "BA-ra",
+    "category": "directions",
+    "part_of_speech": "adverb",
+    "register": "standard",
+    "examples": [
+      { "darija": "ana bara", "arabic": "أنا برا", "english": "I'm outside", "french": "je suis dehors" },
+      { "darija": "khrjj bara", "arabic": "خرج برا", "english": "he went outside", "french": "il est sorti dehors" }
+    ],
+    "cultural_note": "\"Bara\" is the everyday Darija word for outside or away — used for being out of the house, out of town, or simply not here. Common in phrases like \"ana bara\" (I'm out) when texting that you're not home.",
+    "tags": ["essential"],
+    "order": 10001
+  },
+  {
+    "id": "time-10002",
+    "darija": "wahed nhar",
+    "arabic": "واحد النهار",
+    "english": "one day / someday",
+    "french": "un jour",
+    "pronunciation": "WA-hed n-HAR",
+    "category": "time",
+    "part_of_speech": "phrase",
+    "register": "standard",
+    "examples": [
+      { "darija": "wahed nhar ghadi nmshi l-merrikan", "arabic": "واحد النهار غادي نمشي للمريكان", "english": "one day I'll go to America", "french": "un jour j'irai en Amérique" },
+      { "darija": "wahed nhar kont sghir", "arabic": "واحد النهار كنت صغير", "english": "one day, when I was little", "french": "un jour, quand j'étais petit" }
+    ],
+    "cultural_note": "\"Wahed nhar\" literally means \"one day\" and is used to start stories or talk about an unspecified future day. It's the Darija equivalent of \"once upon a time\" when telling stories, or \"someday\" when talking about plans.",
+    "tags": ["essential"],
+    "order": 10002
   }
 ]

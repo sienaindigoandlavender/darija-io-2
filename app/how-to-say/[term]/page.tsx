@@ -73,6 +73,8 @@ const CURATED: Record<string, CuratedTerm> = {
   'welcome':           { query: 'welcome',   title: 'How to Say Welcome in Moroccan Arabic',       description: 'Mrhba, mrhba bik — welcoming in Darija and the culture of hospitality.', category: { slug: 'greetings', name: 'Greetings' } },
   'lets-go':           { query: 'yallah',    title: "How to Say Let's Go in Moroccan Arabic",      description: 'Yallah — the universal Darija command to move, start, or hurry.', category: { slug: 'slang', name: 'Street Slang' } },
   'enough':            { query: 'enough',    title: 'How to Say Enough in Moroccan Arabic',        description: 'Safi, baraka — enough and stop in Darija.', category: { slug: 'slang', name: 'Street Slang' } },
+  'bara':              { query: 'bara',      title: 'How to Say "Bara" (Outside) in Moroccan Arabic', description: 'Bara — outside, away, or out in Darija. The everyday word Moroccans use for being out of the house, out of town, or simply not here.', category: { slug: 'directions', name: 'Directions' } },
+  'wahed-nhar':        { query: 'wahed nhar', title: 'How to Say "Wahed Nhar" (One Day) in Moroccan Arabic', description: 'Wahed nhar — one day, someday in Darija. The phrase Moroccans use to start stories ("once upon a time") or talk about an unspecified future.', category: { slug: 'time', name: 'Time' } },
 };
 
 // ------------------------------------------------------------------
