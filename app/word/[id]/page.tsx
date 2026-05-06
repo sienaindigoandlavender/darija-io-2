@@ -10,7 +10,7 @@ const SITE_URL = 'https://darija.io';
 
 // Per-id title overrides (uses absolute title to bypass the global template).
 const WORD_TITLE_OVERRIDES: Record<string, string> = {
-  'verbs-00900': 'T3awn — "To Help" in Moroccan Darija | darija.io',
+  'verbs-00900': 'T3awn — "To Help / Cooperate" in Moroccan Darija | darija.io',
 };
 
 export async function generateStaticParams() {
