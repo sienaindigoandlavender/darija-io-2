@@ -20,7 +20,7 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
   time: { title: 'Time, Days & Calendar in Darija', description: 'Days of the week, months, seasons, telling time, and temporal expressions in Moroccan Arabic.' },
   nature: { title: 'Nature & Weather in Darija', description: 'Mountains, desert, sea, forests, weather — the natural vocabulary of Morocco\'s diverse landscapes.' },
   culture: { title: 'Moroccan Culture Words in Darija', description: 'Hshuma, niya, mktub, baraka — the untranslatable cultural concepts that define Moroccan society.' },
-  slang: { title: 'Darija Slang — Sir Tqwd, Zwina & More | Meanings in English', description: 'Moroccan Darija slang words explained in English. Includes "sir tqwd" (go away/get lost), street expressions, and everyday slang with meanings.' },
+  slang: { title: 'Darija Slang Meanings — Sir Tqwd, Zwina & Moroccan Street Expressions', description: 'Moroccan Darija slang words explained in English. Includes "sir tqwd" (go away), zwina, and everyday street expressions with their meanings.' },
   health: { title: 'Health & Body in Darija', description: 'Medical vocabulary, body parts, pharmacy phrases, and how to describe symptoms in Moroccan Arabic.' },
   money: { title: 'Money & Banking in Darija', description: 'Dirhams, ryals, change, tips, ATMs — the financial vocabulary of daily Moroccan transactions.' },
   directions: { title: 'Directions in Darija', description: 'Left, right, straight, near, far — navigate Moroccan cities and medinas in Darija.' },

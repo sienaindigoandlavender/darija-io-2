@@ -18,6 +18,9 @@ const SITE_URL = 'https://darija.io';
 interface CuratedTerm {
   query: string;
   title: string;
+  // When set, this exact string is rendered as <title> with no global template
+  // suffix appended. Used for slugs that target a specific branded format.
+  absoluteTitle?: string;
   description: string;
   category?: { slug: string; name: string };
 }
@@ -73,8 +76,8 @@ const CURATED: Record<string, CuratedTerm> = {
   'welcome':           { query: 'welcome',   title: 'How to Say Welcome in Moroccan Arabic',       description: 'Mrhba, mrhba bik — welcoming in Darija and the culture of hospitality.', category: { slug: 'greetings', name: 'Greetings' } },
   'lets-go':           { query: 'yallah',    title: "How to Say Let's Go in Moroccan Arabic",      description: 'Yallah — the universal Darija command to move, start, or hurry.', category: { slug: 'slang', name: 'Street Slang' } },
   'enough':            { query: 'enough',    title: 'How to Say Enough in Moroccan Arabic',        description: 'Safi, baraka — enough and stop in Darija.', category: { slug: 'slang', name: 'Street Slang' } },
-  'bara':              { query: 'bara',      title: 'How to Say "Bara" (Outside) in Moroccan Arabic', description: 'Bara — outside, away, or out in Darija. The everyday word Moroccans use for being out of the house, out of town, or simply not here.', category: { slug: 'directions', name: 'Directions' } },
-  'wahed-nhar':        { query: 'wahed nhar', title: 'How to Say "Wahed Nhar" (One Day) in Moroccan Arabic', description: 'Wahed nhar — one day, someday in Darija. The phrase Moroccans use to start stories ("once upon a time") or talk about an unspecified future.', category: { slug: 'time', name: 'Time' } },
+  'bara':              { query: 'bara',      title: 'How to Say "Outside / Away" in Darija — Bara', absoluteTitle: 'How to Say "Outside / Away" in Darija — Bara | darija.io', description: 'The Moroccan Arabic word for outside or away is "bara" (برا). Learn how to use bara in everyday Darija sentences.', category: { slug: 'directions', name: 'Directions' } },
+  'wahed-nhar':        { query: 'wahed nhar', title: 'How to Say "One Day / Someday" in Darija — Wahed Nhar', absoluteTitle: 'How to Say "One Day / Someday" in Darija — Wahed Nhar | darija.io', description: '"Wahed nhar" (واحد النهار) means "one day" or "someday" in Moroccan Darija. Learn how and when to use it.', category: { slug: 'time', name: 'Time' } },
 };
 
 // ------------------------------------------------------------------
@@ -105,10 +108,14 @@ export async function generateMetadata({ params }: { params: { term: string } })
   const url = `${SITE_URL}/how-to-say/${params.term}`;
   const curated = CURATED[params.term];
   if (curated) {
+    const titleField = curated.absoluteTitle
+      ? { absolute: curated.absoluteTitle }
+      : curated.title;
+    const ogTitle = curated.absoluteTitle || curated.title;
     return {
-      title: curated.title,
+      title: titleField,
       description: curated.description,
-      openGraph: { title: curated.title, description: curated.description, url },
+      openGraph: { title: ogTitle, description: curated.description, url },
       alternates: {
         canonical: url,
         languages: { en: url, fr: url, 'x-default': url },
