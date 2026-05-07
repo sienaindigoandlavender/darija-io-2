@@ -1,4 +1,7 @@
-import { searchWords, searchPhrases } from '@/lib/dictionary';
+import { searchWords, searchPhrases, isWordWorthy, isPhraseWorthy } from '@/lib/dictionary';
+import canonicalOverrides from '@/data/canonical-overrides.json';
+
+const HOW_TO_SAY_CANONICAL_OVERRIDES = canonicalOverrides as Record<string, string>;
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getLocale, getTranslations } from 'next-intl/server';
@@ -163,10 +166,17 @@ export default async function HowToSayPage({ params }: { params: { term: string 
   const queryString = curated?.query ?? unslugTerm(params.term);
   const termLabel = unslugTerm(params.term);
 
-  const [words, phrases] = await Promise.all([
+  const [allWords, allPhrases] = await Promise.all([
     searchWords(queryString),
     searchPhrases(queryString),
   ]);
+  // Only link to pages that are prerendered + canonical (no 404s, no
+  // duplicates). Search-quality is preserved because curated.query already
+  // pulls strong matches; thin matches get dropped here.
+  const words = allWords.filter(
+    w => isWordWorthy(w) && !HOW_TO_SAY_CANONICAL_OVERRIDES[w.id]
+  );
+  const phrases = allPhrases.filter(isPhraseWorthy);
 
   const title = curated?.title ?? `How to say "${capitalize(termLabel)}" in Moroccan Arabic`;
   const description = curated?.description ??

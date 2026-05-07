@@ -64,6 +64,38 @@ const allPhrases: DarijaPhrase[] = phrasesData as DarijaPhrase[];
 
 export async function getAllWords(): Promise<DarijaWord[]> { return allWords; }
 
+/**
+ * "Worthy" = will get prerendered, sitemapped, and internally linked.
+ *
+ * Single source of truth — both `app/sitemap.ts` and the static-params
+ * filter in `app/word/[id]/page.tsx` import this. Keeping the two in
+ * sync is what stops Google's "Discovered/Crawled — currently not
+ * indexed" buckets from filling up with thin pages we'd rather not
+ * have in the index.
+ */
+export function isWordWorthy(w: DarijaWord): boolean {
+  if (!w.english || w.english.length < 2) return false;
+  const tags = w.tags || [];
+  const isPriorityTag = tags.some(t =>
+    ['essential', 'first-day', 'common', 'basic', 'survival'].includes(t)
+  );
+  const hasDepth =
+    !!w.cultural_note ||
+    (Array.isArray(w.examples) && w.examples.length > 0) ||
+    !!w.audio_url;
+  return isPriorityTag || hasDepth;
+}
+
+export function isPhraseWorthy(p: DarijaPhrase): boolean {
+  if (!p.english || p.english.length < 2) return false;
+  const tags = p.tags || [];
+  const isPriorityTag = tags.some(t =>
+    ['essential', 'first-day', 'common', 'survival'].includes(t)
+  );
+  const hasDepth = !!p.cultural_note || !!p.response || !!p.audio_url;
+  return isPriorityTag || hasDepth;
+}
+
 export async function getWordById(id: string): Promise<DarijaWord | null> {
   return allWords.find(w => w.id === id) || null;
 }
