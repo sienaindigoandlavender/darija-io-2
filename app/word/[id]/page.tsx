@@ -1,4 +1,4 @@
-import { getWordById, getAllWords, getWordsByRoot } from '@/lib/dictionary';
+import { getWordById, getAllWords, getWordsByRoot, isWordWorthy } from '@/lib/dictionary';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -19,9 +19,19 @@ const WORD_TITLE_OVERRIDES: Record<string, string> = {
   'verbs-00900': 'T3awn — "To Help / Cooperate" in Moroccan Darija | darija.io',
 };
 
+// Off-list slugs return 404 instead of generating on demand. We do not want
+// long-tail thin pages silently appearing in Google's index.
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const words = await getAllWords();
-  return words.map(w => ({ id: w.id }));
+  // Only prerender pages that are also in the sitemap, and skip pages whose
+  // canonical points elsewhere (those are duplicates that don't need their
+  // own static HTML).
+  return words
+    .filter(isWordWorthy)
+    .filter(w => !CANONICAL_OVERRIDES[w.id])
+    .map(w => ({ id: w.id }));
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
@@ -76,8 +86,14 @@ export default async function WordPage({ params }: { params: { id: string } }) {
   const meaning = locale === 'fr' && word.french ? word.french : word.english;
   const secondary = locale === 'fr' ? word.english : word.french;
 
-  // Same-root words (only fetched if word.root is set)
-  const sameRoot = word.root ? await getWordsByRoot(word.root, word.id) : [];
+  // Same-root words (only fetched if word.root is set). Filter to worthy,
+  // non-canonicalized siblings so we don't link to pages that 404 or
+  // canonicalize away.
+  const sameRoot = word.root
+    ? (await getWordsByRoot(word.root, word.id)).filter(
+        w => isWordWorthy(w) && !CANONICAL_OVERRIDES[w.id]
+      )
+    : [];
 
   const url = `${SITE_URL}/word/${word.id}`;
 

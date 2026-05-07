@@ -1,4 +1,7 @@
-import { getWordsByCategory, getWordCategories } from '@/lib/dictionary';
+import { getWordsByCategory, getWordCategories, isWordWorthy } from '@/lib/dictionary';
+import canonicalOverrides from '@/data/canonical-overrides.json';
+
+const CANONICAL_OVERRIDES = canonicalOverrides as Record<string, string>;
 import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
 import CategoryClient from './CategoryClient';
@@ -81,11 +84,17 @@ const FEATURED_BY_CATEGORY: Record<string, { darija: string; arabic: string; eng
 };
 
 export default async function CategoryPage({ params }: { params: { slug: string } }) {
-  const [words, categories, locale] = await Promise.all([
+  const [allCategoryWords, categories, locale] = await Promise.all([
     getWordsByCategory(params.slug),
     getWordCategories(),
     getLocale(),
   ]);
+  // Only render links to pages that actually exist (i.e. are prerendered) and
+  // aren't a duplicate canonicalized to another URL. This stops Google from
+  // discovering thin pages via category browse.
+  const words = allCategoryWords.filter(
+    w => isWordWorthy(w) && !CANONICAL_OVERRIDES[w.id]
+  );
   const current = categories.find(c => c.id === params.slug);
   const meta = CATEGORY_META[params.slug];
   const featured = FEATURED_BY_CATEGORY[params.slug];

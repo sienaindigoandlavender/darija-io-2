@@ -7,7 +7,12 @@ import {
   getWordCategories,
   getPhraseCategories,
   getPhrasesByCategory,
+  isWordWorthy,
+  isPhraseWorthy,
 } from '@/lib/dictionary';
+import canonicalOverrides from '@/data/canonical-overrides.json';
+
+const HOME_CANONICAL_OVERRIDES = canonicalOverrides as Record<string, string>;
 import HomeHero from './_home/HomeHero';
 import WordOfTheDay from './_home/WordOfTheDay';
 import CategoryGrid from './_home/CategoryGrid';
@@ -52,15 +57,29 @@ export default async function HomePage() {
       getPhrasesByCategory('survival'),
     ]);
 
+  // Only ever surface — and link to — words/phrases that are prerendered
+  // and aren't canonicalized away. Otherwise the homepage renders inbound
+  // links to 404 / duplicate URLs that drag indexing health down.
+  const linkable = (w: { id: string }) =>
+    !HOME_CANONICAL_OVERRIDES[w.id];
+
   // Word of the day — deterministic per day, only words with cultural notes
-  const withNotes = allWords.filter(w => w.cultural_note);
+  // (and worthy + non-duplicate, since this links into /word/[id]).
+  const withNotes = allWords.filter(
+    w => w.cultural_note && isWordWorthy(w) && linkable(w)
+  );
   const wotd = withNotes.length > 0 ? withNotes[dayIndex() % withNotes.length] : null;
 
   // First-day picks: 8 essentials, rotated daily for freshness
-  const firstDayPicks = pickByDay(essentials, 8);
+  const firstDayPicks = pickByDay(
+    essentials.filter(w => isWordWorthy(w) && linkable(w)),
+    8
+  );
 
   // Featured phrases: 4 survival phrases, rotated daily
-  const featuredPhrases = pickByDay(survivalPhrases, 4);
+  const featuredPhrases = pickByDay(survivalPhrases.filter(isPhraseWorthy), 4);
+
+  const worthyProverbs = proverbs.filter(isPhraseWorthy);
 
   return (
     <>
@@ -70,7 +89,7 @@ export default async function HomePage() {
       <CategoryGrid wordCategories={wordCategories} phraseCategories={phraseCategories} />
       <FirstDaySection words={firstDayPicks} />
       <PhrasebookSection phrases={featuredPhrases} />
-      {proverbs.length > 0 && <WisdomSection proverbs={proverbs.slice(0, 6)} />}
+      {worthyProverbs.length > 0 && <WisdomSection proverbs={worthyProverbs.slice(0, 6)} />}
       <NewsletterSignup />
     </>
   );

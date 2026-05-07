@@ -2,51 +2,15 @@ import { MetadataRoute } from 'next';
 import words from '@/data/words.json';
 import phrases from '@/data/phrases.json';
 import { getPrioritizedHowToSaySlugs, slugifyTerm } from '@/lib/howToSay';
+import {
+  isWordWorthy,
+  isPhraseWorthy,
+  type DarijaWord,
+  type DarijaPhrase,
+} from '@/lib/dictionary';
 
 const SITE_URL = 'https://darija.io';
 const today = new Date().toISOString().split('T')[0];
-
-interface Word {
-  id: string;
-  english?: string;
-  tags?: string[];
-  order?: number;
-  examples?: unknown[];
-  cultural_note?: string;
-  audio_url?: string;
-}
-
-interface Phrase {
-  id: string;
-  english?: string;
-  tags?: string[];
-  cultural_note?: string;
-  response?: unknown;
-  audio_url?: string;
-}
-
-function isWordWorthy(w: Word): boolean {
-  if (!w.english || w.english.length < 2) return false;
-  const tags = w.tags || [];
-  const isPriorityTag = tags.some(t =>
-    ['essential', 'first-day', 'common', 'basic', 'survival'].includes(t)
-  );
-  const hasDepth =
-    !!w.cultural_note ||
-    (Array.isArray(w.examples) && w.examples.length > 0) ||
-    !!w.audio_url;
-  return isPriorityTag || hasDepth;
-}
-
-function isPhraseWorthy(p: Phrase): boolean {
-  if (!p.english || p.english.length < 2) return false;
-  const tags = p.tags || [];
-  const isPriorityTag = tags.some(t =>
-    ['essential', 'first-day', 'common', 'survival'].includes(t)
-  );
-  const hasDepth = !!p.cultural_note || !!p.response || !!p.audio_url;
-  return isPriorityTag || hasDepth;
-}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -100,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const wordsArr = words as Word[];
+  const wordsArr = words as DarijaWord[];
   const wordPages: MetadataRoute.Sitemap = wordsArr
     .filter(isWordWorthy)
     .slice(0, 2000)
@@ -111,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     }));
 
-  const phrasesArr = phrases as Phrase[];
+  const phrasesArr = phrases as DarijaPhrase[];
   const phrasePages: MetadataRoute.Sitemap = phrasesArr
     .filter(isPhraseWorthy)
     .slice(0, 500)

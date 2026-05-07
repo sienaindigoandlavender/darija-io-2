@@ -1,4 +1,4 @@
-import { getPhraseById, getAllPhrases, getPhrasesByCategory } from '@/lib/dictionary';
+import { getPhraseById, getAllPhrases, getPhrasesByCategory, isPhraseWorthy } from '@/lib/dictionary';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -22,9 +22,14 @@ const CATEGORY_LABELS: Record<string, string> = {
   photography: 'Photography', festivals: 'Festivals', garden: 'Gardens & Nature',
 };
 
+// Off-list slugs return 404 instead of generating on demand. We do not want
+// long-tail thin pages silently appearing in Google's index.
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const phrases = await getAllPhrases();
-  return phrases.map(p => ({ id: p.id }));
+  // Only prerender pages that are also in the sitemap.
+  return phrases.filter(isPhraseWorthy).map(p => ({ id: p.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -76,9 +81,12 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
   const meaning = locale === 'fr' && phrase.french ? phrase.french : phrase.english;
   const secondary = locale === 'fr' ? phrase.english : phrase.french;
 
-  // Get related phrases from same category
+  // Get related phrases from same category. Only link to worthy phrases —
+  // others are noindex/404 and shouldn't appear as inbound links.
   const categoryPhrases = await getPhrasesByCategory(phrase.category);
-  const related = categoryPhrases.filter(p => p.id !== phrase.id).slice(0, 6);
+  const related = categoryPhrases
+    .filter(p => p.id !== phrase.id && isPhraseWorthy(p))
+    .slice(0, 6);
 
   const categoryLabel = CATEGORY_LABELS[phrase.category] || phrase.category;
 
