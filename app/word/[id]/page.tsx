@@ -5,8 +5,14 @@ import { notFound } from 'next/navigation';
 import { getTranslations, getLocale } from 'next-intl/server';
 import AudioButton from '@/components/AudioButton';
 import RecentTracker from '@/components/RecentTracker';
+import canonicalOverrides from '@/data/canonical-overrides.json';
 
 const SITE_URL = 'https://darija.io';
+
+// Maps duplicate word IDs to their canonical (most-complete) sibling so
+// search engines consolidate ranking signal on a single URL. Generated from
+// (Arabic, English) duplicate detection plus a few editorial overrides.
+const CANONICAL_OVERRIDES = canonicalOverrides as Record<string, string>;
 
 // Per-id title overrides (uses absolute title to bypass the global template).
 const WORD_TITLE_OVERRIDES: Record<string, string> = {
@@ -38,6 +44,11 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   const description = `How to say "${word.english}" in Moroccan Arabic: ${word.darija} (${word.arabic}). Pronounced /${word.pronunciation}/. ${word.french ? `French: ${word.french}.` : ''} ${word.cultural_note ? word.cultural_note.slice(0, 120) : ''}`;
   const url = `${SITE_URL}/word/${word.id}`;
 
+  // If this entry is a duplicate, point its canonical at the master entry so
+  // Google consolidates ranking signal on a single URL.
+  const canonicalId = CANONICAL_OVERRIDES[word.id] || word.id;
+  const canonicalUrl = `${SITE_URL}/word/${canonicalId}`;
+
   return {
     title: overrideTitle ? { absolute: overrideTitle } : title,
     description,
@@ -50,8 +61,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       // in this segment, which generates a per-word card.
     },
     alternates: {
-      canonical: url,
-      languages: { en: url, fr: url, 'x-default': url },
+      canonical: canonicalUrl,
+      languages: { en: canonicalUrl, fr: canonicalUrl, 'x-default': canonicalUrl },
     },
   };
 }
