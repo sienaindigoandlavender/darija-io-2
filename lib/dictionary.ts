@@ -72,6 +72,12 @@ export async function getAllWords(): Promise<DarijaWord[]> { return allWords; }
  * sync is what stops Google's "Discovered/Crawled — currently not
  * indexed" buckets from filling up with thin pages we'd rather not
  * have in the index.
+ *
+ * Bar:
+ *  - Non-priority words must have real depth: a cultural note, two or
+ *    more examples, or audio. One example alone is not enough.
+ *  - Priority-tagged words still need at least one example (or any
+ *    depth signal) — they can't be just a bare headword.
  */
 export function isWordWorthy(w: DarijaWord): boolean {
   if (!w.english || w.english.length < 2) return false;
@@ -79,11 +85,9 @@ export function isWordWorthy(w: DarijaWord): boolean {
   const isPriorityTag = tags.some(t =>
     ['essential', 'first-day', 'common', 'basic', 'survival'].includes(t)
   );
-  const hasDepth =
-    !!w.cultural_note ||
-    (Array.isArray(w.examples) && w.examples.length > 0) ||
-    !!w.audio_url;
-  return isPriorityTag || hasDepth;
+  const examples = Array.isArray(w.examples) ? w.examples : [];
+  const hasDepth = !!w.cultural_note || examples.length >= 2 || !!w.audio_url;
+  return isPriorityTag ? hasDepth || examples.length >= 1 : hasDepth;
 }
 
 export function isPhraseWorthy(p: DarijaPhrase): boolean {
