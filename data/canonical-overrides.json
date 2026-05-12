@@ -1,19 +1,6 @@
 {
-  "adjectives-02081": "numbers-00194",
-  "adjectives-04192": "compliments-00684",
-  "adjectives-04532": "emotions-00231",
-  "adjectives-04760": "food-00095",
-  "directions-08786": "directions-00418",
-  "emergency-07480": "emergency-01608",
-  "emotions-03815": "survival-00744",
-  "emotions-03816": "survival-00745",
   "family-09531": "family-00198",
-  "food-02144": "food-00112",
-  "food-02145": "food-00079",
   "food-05926": "food-02131",
-  "food-06239": "food-00100",
-  "food-08649": "food-00066",
-  "food-08654": "food-00079",
   "greetings-01981": "greetings-00003",
   "greetings-01982": "greetings-00004",
   "greetings-01983": "greetings-00027",
@@ -21,12 +8,7 @@
   "greetings-04692": "greetings-00026",
   "greetings-06261": "greetings-00026",
   "greetings-08177": "greetings-00005",
-  "health-09861": "health-00402",
-  "home-02802": "home-00329",
   "money-00438": "shopping-00128",
   "pronouns-09170": "greetings-00036",
-  "slang-02867": "slang-00763",
-  "slang-03937": "emotions-00245",
-  "slang-04807": "greetings-01171",
-  "verbs-00931": "verbs-00312"
+  "slang-03937": "emotions-00245"
 }
