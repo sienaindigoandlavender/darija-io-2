@@ -76,8 +76,9 @@ export async function getAllWords(): Promise<DarijaWord[]> { return allWords; }
  * Bar:
  *  - Non-priority words must have real depth: a cultural note, two or
  *    more examples, or audio. One example alone is not enough.
- *  - Priority-tagged words still need at least one example (or any
- *    depth signal) — they can't be just a bare headword.
+ *  - Priority-tagged words (essential / first-day / common / basic /
+ *    survival) qualify on their own. These are curated essentials and
+ *    the right fix for thinness is enrichment, not exclusion.
  */
 export function isWordWorthy(w: DarijaWord): boolean {
   if (!w.english || w.english.length < 2) return false;
@@ -85,9 +86,12 @@ export function isWordWorthy(w: DarijaWord): boolean {
   const isPriorityTag = tags.some(t =>
     ['essential', 'first-day', 'common', 'basic', 'survival'].includes(t)
   );
-  const examples = Array.isArray(w.examples) ? w.examples : [];
-  const hasDepth = !!w.cultural_note || examples.length >= 2 || !!w.audio_url;
-  return isPriorityTag ? hasDepth || examples.length >= 1 : hasDepth;
+  const exampleCount = Array.isArray(w.examples) ? w.examples.length : 0;
+  const hasStrongDepth =
+    !!w.cultural_note ||
+    exampleCount >= 2 ||
+    !!w.audio_url;
+  return hasStrongDepth || isPriorityTag;
 }
 
 export function isPhraseWorthy(p: DarijaPhrase): boolean {
@@ -96,8 +100,9 @@ export function isPhraseWorthy(p: DarijaPhrase): boolean {
   const isPriorityTag = tags.some(t =>
     ['essential', 'first-day', 'common', 'survival'].includes(t)
   );
-  const hasDepth = !!p.cultural_note || !!p.response || !!p.audio_url;
-  return isPriorityTag || hasDepth;
+  const hasResponse = !!p.response?.darija && p.response.darija.length >= 3;
+  const hasStrongDepth = !!p.cultural_note || hasResponse || !!p.audio_url;
+  return hasStrongDepth || isPriorityTag;
 }
 
 export async function getWordById(id: string): Promise<DarijaWord | null> {
