@@ -51,7 +51,10 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
   const overrideTitle = WORD_TITLE_OVERRIDES[params.id];
   const title = `${word.darija} (${word.arabic}) — ${meaning} in Darija`;
-  const description = `How to say "${word.english}" in Moroccan Arabic: ${word.darija} (${word.arabic}). Pronounced /${word.pronunciation}/. ${word.french ? `French: ${word.french}.` : ''} ${word.cultural_note ? word.cultural_note.slice(0, 120) : ''}`;
+  // Guard against missing pronunciation — otherwise we render "/undefined/"
+  // in the description and the page can 5xx during metadata generation.
+  const pronunciationPart = word.pronunciation ? `Pronounced /${word.pronunciation}/. ` : '';
+  const description = `How to say "${word.english}" in Moroccan Arabic: ${word.darija} (${word.arabic}). ${pronunciationPart}${word.french ? `French: ${word.french}.` : ''} ${word.cultural_note ? word.cultural_note.slice(0, 120) : ''}`;
   const url = `${SITE_URL}/word/${word.id}`;
 
   // If this entry is a duplicate, point its canonical at the master entry so
