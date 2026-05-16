@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import LocaleSwitcher from './LocaleSwitcher';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -22,9 +21,6 @@ export default function Footer() {
               <p className="text-xs text-white/70 leading-relaxed max-w-xs">
                 {t('tagline')}
               </p>
-              <div className="mt-5">
-                <LocaleSwitcher subtle />
-              </div>
               <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-5">
                 Sibling site
               </p>
