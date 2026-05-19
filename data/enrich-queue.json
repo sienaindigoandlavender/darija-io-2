@@ -1,0 +1,3649 @@
+[
+  {
+    "id": "adjectives-00463",
+    "darija": "kbir",
+    "arabic": "كبير",
+    "english": "big",
+    "french": "grand",
+    "pronunciation": "k-BIR",
+    "category": "adjectives",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "adjectives-00464",
+    "darija": "sghir",
+    "arabic": "صغير",
+    "english": "small",
+    "french": "petit",
+    "pronunciation": "s-GHIR",
+    "category": "adjectives",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "adjectives-00467",
+    "darija": "jdid",
+    "arabic": "جديد",
+    "english": "new",
+    "french": "nouveau",
+    "pronunciation": "j-DID",
+    "category": "adjectives",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "adjectives-00470",
+    "darija": "s3ib",
+    "arabic": "صعيب",
+    "english": "difficult",
+    "french": "difficile",
+    "pronunciation": "s-3IB",
+    "category": "adjectives",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "adjectives-00471",
+    "darija": "sahel",
+    "arabic": "ساهل",
+    "english": "easy",
+    "french": "facile",
+    "pronunciation": "SA-hel",
+    "category": "adjectives",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "adjectives-00493",
+    "darija": "qwi",
+    "arabic": "قوي",
+    "english": "strong",
+    "french": "fort",
+    "pronunciation": "Q-WI",
+    "category": "adjectives",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "adjectives-00499",
+    "darija": "sh7i7",
+    "arabic": "صحيح",
+    "english": "correct/true",
+    "french": "correct/vrai",
+    "pronunciation": "s-7I7",
+    "category": "adjectives",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00370",
+    "darija": "mdina",
+    "arabic": "مدينة",
+    "english": "city",
+    "french": "ville",
+    "pronunciation": "mdi-NA",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00371",
+    "darija": "jami3",
+    "arabic": "جامع",
+    "english": "mosque",
+    "french": "mosquée",
+    "pronunciation": "JA-mi3",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00372",
+    "darija": "funduq",
+    "arabic": "فندق",
+    "english": "hotel",
+    "french": "hôtel",
+    "pronunciation": "fun-DUQ",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00373",
+    "darija": "hammam",
+    "arabic": "حمام",
+    "english": "public bath",
+    "french": "hammam",
+    "pronunciation": "ham-MAM",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "culture"
+    ]
+  },
+  {
+    "id": "city-00374",
+    "darija": "sbitar",
+    "arabic": "سبيطار",
+    "english": "hospital",
+    "french": "hôpital",
+    "pronunciation": "sbi-TAR",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00375",
+    "darija": "farmasyan",
+    "arabic": "فارماسيان",
+    "english": "pharmacy",
+    "french": "pharmacie",
+    "pronunciation": "far-ma-SYAN",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00376",
+    "darija": "bulis",
+    "arabic": "البوليس",
+    "english": "police",
+    "french": "police",
+    "pronunciation": "bu-LIS",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00378",
+    "darija": "banka",
+    "arabic": "البنكة",
+    "english": "bank",
+    "french": "banque",
+    "pronunciation": "BAN-ka",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00381",
+    "darija": "sa7a",
+    "arabic": "ساحة",
+    "english": "square",
+    "french": "place",
+    "pronunciation": "SA-ha",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00385",
+    "darija": "ma7tta",
+    "arabic": "محطّة",
+    "english": "station",
+    "french": "gare",
+    "pronunciation": "mah-TT-a",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00390",
+    "darija": "triq",
+    "arabic": "طريق",
+    "english": "road",
+    "french": "route",
+    "pronunciation": "t-RIQ",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "city-00391",
+    "darija": "plaj",
+    "arabic": "بلاج",
+    "english": "beach",
+    "french": "plage",
+    "pronunciation": "PLAJ",
+    "category": "city",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "compliments-00683",
+    "darija": "lla ybarek",
+    "arabic": "الله يبارك",
+    "english": "God bless you",
+    "french": "que Dieu te bénisse",
+    "pronunciation": "lla y-BA-rek",
+    "category": "compliments",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "compliments-00684",
+    "darija": "zwin bzzaf",
+    "arabic": "زوين بزاف",
+    "english": "very beautiful",
+    "french": "très beau",
+    "pronunciation": "ZWIN b-ZAF",
+    "category": "compliments",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "compliments-00686",
+    "darija": "mbruk",
+    "arabic": "مبروك",
+    "english": "congratulations",
+    "french": "félicitations",
+    "pronunciation": "m-BRUK",
+    "category": "compliments",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "directions-00418",
+    "darija": "sir nishaan",
+    "arabic": "سير نيشان",
+    "english": "go straight",
+    "french": "va tout droit",
+    "pronunciation": "sir ni-SHAN",
+    "category": "directions",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "directions-00419",
+    "darija": "dwr 3la limin",
+    "arabic": "دور على اليمين",
+    "english": "turn right",
+    "french": "tourne à droite",
+    "pronunciation": "dwr 3la li-MIN",
+    "category": "directions",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "directions-00420",
+    "darija": "dwr 3la lisir",
+    "arabic": "دور على اليسير",
+    "english": "turn left",
+    "french": "tourne à gauche",
+    "pronunciation": "dwr 3la li-SIR",
+    "category": "directions",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "directions-00421",
+    "darija": "hna",
+    "arabic": "هنا",
+    "english": "here",
+    "french": "ici",
+    "pronunciation": "HNA",
+    "category": "directions",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "directions-00422",
+    "darija": "lhih",
+    "arabic": "لهيه",
+    "english": "there",
+    "french": "là-bas",
+    "pronunciation": "l-HIH",
+    "category": "directions",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "directions-00430",
+    "darija": "barra",
+    "arabic": "بارا",
+    "english": "outside",
+    "french": "dehors",
+    "pronunciation": "BAR-ra",
+    "category": "directions",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "emergency-00694",
+    "darija": "3awn",
+    "arabic": "عاون",
+    "english": "help!",
+    "french": "à l'aide",
+    "pronunciation": "3AWN",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00695",
+    "darija": "3tqni",
+    "arabic": "عتقني",
+    "english": "save me!",
+    "french": "sauvez-moi",
+    "pronunciation": "3T-qni",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00696",
+    "darija": "ambilans",
+    "arabic": "أمبيلانس",
+    "english": "ambulance",
+    "french": "ambulance",
+    "pronunciation": "am-bi-LANS",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00697",
+    "darija": "pompier",
+    "arabic": "بومبييه",
+    "english": "firefighter",
+    "french": "pompier",
+    "pronunciation": "pom-PIYE",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00698",
+    "darija": "sraq",
+    "arabic": "سرق",
+    "english": "to steal/thief",
+    "french": "voler",
+    "pronunciation": "SRAQ",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00699",
+    "darija": "khasni tbib",
+    "arabic": "خاصني طبيب",
+    "english": "I need a doctor",
+    "french": "j'ai besoin d'un médecin",
+    "pronunciation": "khas-NI t-BIB",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00700",
+    "darija": "fiyya lwja3",
+    "arabic": "فيا الوجع",
+    "english": "I'm in pain",
+    "french": "j'ai mal",
+    "pronunciation": "fi-YA l-WJA3",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00701",
+    "darija": "7dth",
+    "arabic": "حادث",
+    "english": "accident",
+    "french": "accident",
+    "pronunciation": "HA-deth",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00702",
+    "darija": "khttar",
+    "arabic": "خطر",
+    "english": "danger",
+    "french": "danger",
+    "pronunciation": "kh-TAR",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00703",
+    "darija": "rdd lbal",
+    "arabic": "ردّ البال",
+    "english": "be careful",
+    "french": "fais attention",
+    "pronunciation": "rdd l-BAL",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-00704",
+    "darija": "nqdr n3yt",
+    "arabic": "نقدر نعيط",
+    "english": "I can call",
+    "french": "je peux appeler",
+    "pronunciation": "n-QDER n-3YT",
+    "category": "emergency",
+    "part_of_speech": "noun",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01605",
+    "darija": "tq9at lia l passport",
+    "arabic": "تقسات ليا الباسبور",
+    "english": "I lost my passport",
+    "french": "j'ai perdu mon passeport",
+    "pronunciation": "tq-SAT LIA l pass-PORT",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01606",
+    "darija": "tsrq lia portatif",
+    "arabic": "تسرق ليا بورتابل",
+    "english": "phone was stolen",
+    "french": "on m'a volé mon téléphone",
+    "pronunciation": "ts-REQ LIA por-ta-TIF",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01607",
+    "darija": "3ndi 7ssasiya l",
+    "arabic": "عندي حساسية ل",
+    "english": "I'm allergic to...",
+    "french": "je suis allergique à...",
+    "pronunciation": "3n-DI hsa-SI-ya l",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01608",
+    "darija": "fiya ddwkha",
+    "arabic": "فيا الدوخة",
+    "english": "I feel dizzy",
+    "french": "j'ai le vertige",
+    "pronunciation": "fi-YA d-DW-kha",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01609",
+    "darija": "3yyt l lambilans",
+    "arabic": "عيّط لأمبيلانس",
+    "english": "call an ambulance",
+    "french": "appelle une ambulance",
+    "pronunciation": "3Y-yt l l-am-bi-LANS",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01610",
+    "darija": "khasni dwa",
+    "arabic": "خاصني دوا",
+    "english": "I need medicine",
+    "french": "j'ai besoin de médicaments",
+    "pronunciation": "khas-NI DWA",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01611",
+    "darija": "ana 7amla",
+    "arabic": "أنا حاملة",
+    "english": "I'm pregnant",
+    "french": "je suis enceinte",
+    "pronunciation": "a-NA HAM-la",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01612",
+    "darija": "maymknsh ntnffss",
+    "arabic": "ما يمكنش نتنفّس",
+    "english": "I can't breathe",
+    "french": "je ne peux pas respirer",
+    "pronunciation": "ma-YM-knsh nt-NF-fss",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01613",
+    "darija": "ma nqdrsh ntmsha",
+    "arabic": "ما نقدرش نتمشى",
+    "english": "I can't walk",
+    "french": "je ne peux pas marcher",
+    "pronunciation": "ma NQ-drsh nt-MSHA",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emergency-01614",
+    "darija": "khasni safara",
+    "arabic": "خاصني سفارة",
+    "english": "I need the embassy",
+    "french": "j'ai besoin de l'ambassade",
+    "pronunciation": "khas-NI sa-FA-ra",
+    "category": "emergency",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "emotions-00231",
+    "darija": "far7an",
+    "arabic": "فرحان",
+    "english": "happy",
+    "french": "content",
+    "pronunciation": "far-HAN",
+    "category": "emotions",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "emotions-00232",
+    "darija": "7zin",
+    "arabic": "حزين",
+    "english": "sad",
+    "french": "triste",
+    "pronunciation": "h-ZIN",
+    "category": "emotions",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "emotions-00234",
+    "darija": "khayf",
+    "arabic": "خايف",
+    "english": "scared",
+    "french": "effrayé",
+    "pronunciation": "KHAYF",
+    "category": "emotions",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "emotions-00236",
+    "darija": "zwin",
+    "arabic": "زوين",
+    "english": "beautiful/handsome",
+    "french": "beau",
+    "pronunciation": "ZWIN",
+    "category": "emotions",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "compliments"
+    ]
+  },
+  {
+    "id": "emotions-00237",
+    "darija": "zwina",
+    "arabic": "زوينة",
+    "english": "beautiful (f)",
+    "french": "belle",
+    "pronunciation": "ZWI-na",
+    "category": "emotions",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "compliments"
+    ]
+  },
+  {
+    "id": "emotions-00242",
+    "darija": "kanb7bk",
+    "arabic": "كنبحبك",
+    "english": "I love you",
+    "french": "je t'aime",
+    "pronunciation": "kan-b-HB-k",
+    "category": "emotions",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "emotions-00243",
+    "darija": "wa7shni",
+    "arabic": "واحشني",
+    "english": "I miss you",
+    "french": "tu me manques",
+    "pronunciation": "WAH-sh-ni",
+    "category": "emotions",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "emotions-00249",
+    "darija": "kayji3ni",
+    "arabic": "كيجيعني",
+    "english": "it hurts me",
+    "french": "ça me fait mal",
+    "pronunciation": "kay-JI3-ni",
+    "category": "emotions",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "health"
+    ]
+  },
+  {
+    "id": "family-00197",
+    "darija": "bba",
+    "arabic": "بّا",
+    "english": "my father",
+    "french": "mon père",
+    "pronunciation": "B-ba",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00200",
+    "darija": "wldi",
+    "arabic": "ولدي",
+    "english": "my son/child",
+    "french": "mon fils",
+    "pronunciation": "WL-di",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00201",
+    "darija": "bnti",
+    "arabic": "بنتي",
+    "english": "my daughter",
+    "french": "ma fille",
+    "pronunciation": "BN-ti",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00202",
+    "darija": "rajl",
+    "arabic": "راجل",
+    "english": "man/husband",
+    "french": "homme/mari",
+    "pronunciation": "RA-jl",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00204",
+    "darija": "drari",
+    "arabic": "دراري",
+    "english": "children/kids",
+    "french": "enfants",
+    "pronunciation": "dra-RI",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00212",
+    "darija": "sahbi",
+    "arabic": "صاحبي",
+    "english": "my friend (m)",
+    "french": "mon ami",
+    "pronunciation": "SAH-bi",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00213",
+    "darija": "sahbti",
+    "arabic": "صاحبتي",
+    "english": "my friend (f)",
+    "french": "mon amie",
+    "pronunciation": "SAH-b-ti",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00220",
+    "darija": "nass",
+    "arabic": "ناس",
+    "english": "people",
+    "french": "gens",
+    "pronunciation": "NASS",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "family-00221",
+    "darija": "3a2ila",
+    "arabic": "عائلة",
+    "english": "family",
+    "french": "famille",
+    "pronunciation": "3A-i-la",
+    "category": "family",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00052",
+    "darija": "lma",
+    "arabic": "لما",
+    "english": "water",
+    "french": "eau",
+    "pronunciation": "l-MA",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "first-day",
+      "survival"
+    ]
+  },
+  {
+    "id": "food-00055",
+    "darija": "lhem",
+    "arabic": "لحم",
+    "english": "meat",
+    "french": "viande",
+    "pronunciation": "l-HEM",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00056",
+    "darija": "djaj",
+    "arabic": "دجاج",
+    "english": "chicken",
+    "french": "poulet",
+    "pronunciation": "d-JAJ",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00058",
+    "darija": "khdra",
+    "arabic": "خضرة",
+    "english": "vegetables",
+    "french": "légumes",
+    "pronunciation": "KHOD-ra",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00082",
+    "darija": "lmakla",
+    "arabic": "لماكلة",
+    "english": "food / the meal",
+    "french": "nourriture / le repas",
+    "pronunciation": "l-MAK-la",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "food-00084",
+    "darija": "ghda",
+    "arabic": "غدا",
+    "english": "lunch",
+    "french": "déjeuner",
+    "pronunciation": "GH-DA",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00085",
+    "darija": "3sha",
+    "arabic": "عشا",
+    "english": "dinner",
+    "french": "dîner",
+    "pronunciation": "3-SHA",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00086",
+    "darija": "ju3",
+    "arabic": "جوع",
+    "english": "hunger / hungry",
+    "french": "faim",
+    "pronunciation": "JU3",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "food-00087",
+    "darija": "l3tsh",
+    "arabic": "العطش",
+    "english": "thirst / thirsty",
+    "french": "soif",
+    "pronunciation": "l-3TSH",
+    "category": "food",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "food-00088",
+    "darija": "kul",
+    "arabic": "كول",
+    "english": "eat (command)",
+    "french": "mange",
+    "pronunciation": "KUL",
+    "category": "food",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "food-00089",
+    "darija": "shreb",
+    "arabic": "شرب",
+    "english": "drink (command)",
+    "french": "bois",
+    "pronunciation": "SHREB",
+    "category": "food",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "food-00091",
+    "darija": "skhun",
+    "arabic": "سخون",
+    "english": "hot",
+    "french": "chaud",
+    "pronunciation": "s-KHUN",
+    "category": "food",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00092",
+    "darija": "bard",
+    "arabic": "بارد",
+    "english": "cold",
+    "french": "froid",
+    "pronunciation": "BARD",
+    "category": "food",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "food-00093",
+    "darija": "7ar",
+    "arabic": "حار",
+    "english": "spicy / hot",
+    "french": "épicé / piquant",
+    "pronunciation": "HAR",
+    "category": "food",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "greetings-00003",
+    "darija": "sbah lkhir",
+    "arabic": "صباح الخير",
+    "english": "good morning",
+    "french": "bonjour (matin)",
+    "pronunciation": "SBAH l-KHIR",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00004",
+    "darija": "msa lkhir",
+    "arabic": "مسا الخير",
+    "english": "good evening",
+    "french": "bonsoir",
+    "pronunciation": "MSA l-KHIR",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00009",
+    "darija": "kif dayer",
+    "arabic": "كيف داير",
+    "english": "how are you (to a man)",
+    "french": "comment vas-tu (homme)",
+    "pronunciation": "KIF DAY-er",
+    "category": "greetings",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00010",
+    "darija": "kif dayra",
+    "arabic": "كيف دايرة",
+    "english": "how are you (to a woman)",
+    "french": "comment vas-tu (femme)",
+    "pronunciation": "KIF DAY-ra",
+    "category": "greetings",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00011",
+    "darija": "bikhir",
+    "arabic": "بخير",
+    "english": "fine / well",
+    "french": "bien",
+    "pronunciation": "b-KHIR",
+    "category": "greetings",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00020",
+    "darija": "iyeh",
+    "arabic": "إيه",
+    "english": "yes",
+    "french": "oui",
+    "pronunciation": "I-yeh",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-00021",
+    "darija": "lla",
+    "arabic": "لا",
+    "english": "no",
+    "french": "non",
+    "pronunciation": "LLA",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential",
+      "first-day",
+      "survival"
+    ]
+  },
+  {
+    "id": "greetings-00022",
+    "darija": "smiyti",
+    "arabic": "سميتي",
+    "english": "my name is",
+    "french": "je m'appelle",
+    "pronunciation": "SMI-yti",
+    "category": "greetings",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00023",
+    "darija": "shno smiytek",
+    "arabic": "شنو سميتك",
+    "english": "what's your name",
+    "french": "comment tu t'appelles",
+    "pronunciation": "SHNO smi-YTEK",
+    "category": "greetings",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00024",
+    "darija": "mtsharfin",
+    "arabic": "متشرفين",
+    "english": "nice to meet you",
+    "french": "enchanté",
+    "pronunciation": "mt-SHAR-fin",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00027",
+    "darija": "tsbah 3la khir",
+    "arabic": "تصبح على خير",
+    "english": "good night",
+    "french": "bonne nuit",
+    "pronunciation": "ts-BAH 3la KHIR",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential",
+      "first-day"
+    ]
+  },
+  {
+    "id": "greetings-00029",
+    "darija": "lla ykhlik",
+    "arabic": "الله يخليك",
+    "english": "excuse me / please",
+    "french": "excusez-moi / s'il vous plaît",
+    "pronunciation": "LLA y-KHLIK",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "greetings-00034",
+    "darija": "3lash",
+    "arabic": "علاش",
+    "english": "why",
+    "french": "pourquoi",
+    "pronunciation": "3-LASH",
+    "category": "greetings",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-00035",
+    "darija": "kifash",
+    "arabic": "كيفاش",
+    "english": "how",
+    "french": "comment",
+    "pronunciation": "ki-FASH",
+    "category": "greetings",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "greetings-00036",
+    "darija": "shno",
+    "arabic": "شنو",
+    "english": "what",
+    "french": "quoi / qu'est-ce que",
+    "pronunciation": "SHNO",
+    "category": "greetings",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "greetings-00037",
+    "darija": "shkun",
+    "arabic": "شكون",
+    "english": "who",
+    "french": "qui",
+    "pronunciation": "SHKUN",
+    "category": "greetings",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-00038",
+    "darija": "fin",
+    "arabic": "فين",
+    "english": "where",
+    "french": "où",
+    "pronunciation": "FIN",
+    "category": "greetings",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "greetings-00039",
+    "darija": "imta",
+    "arabic": "إمتى",
+    "english": "when",
+    "french": "quand",
+    "pronunciation": "IM-ta",
+    "category": "greetings",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-00041",
+    "darija": "ma3ndish",
+    "arabic": "ماعنديش",
+    "english": "I don't have",
+    "french": "je n'ai pas",
+    "pronunciation": "MA-3n-DISH",
+    "category": "greetings",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "greetings-00042",
+    "darija": "mafhemtsh",
+    "arabic": "مافهمتش",
+    "english": "I don't understand",
+    "french": "je ne comprends pas",
+    "pronunciation": "ma-FHEMT-sh",
+    "category": "greetings",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "first-day",
+      "survival"
+    ]
+  },
+  {
+    "id": "greetings-00043",
+    "darija": "kan3ref",
+    "arabic": "كنعرف",
+    "english": "I know",
+    "french": "je sais",
+    "pronunciation": "kan-3REF",
+    "category": "greetings",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-00044",
+    "darija": "ma3reftsh",
+    "arabic": "ماعرفتش",
+    "english": "I don't know",
+    "french": "je ne sais pas",
+    "pronunciation": "ma-3REFT-sh",
+    "category": "greetings",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "greetings-00045",
+    "darija": "hani",
+    "arabic": "هاني",
+    "english": "here I am / I'm fine",
+    "french": "me voilà / je vais bien",
+    "pronunciation": "HA-ni",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-00047",
+    "darija": "khayb",
+    "arabic": "خايب",
+    "english": "bad / ugly",
+    "french": "mauvais / moche",
+    "pronunciation": "KHAYB",
+    "category": "greetings",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-01171",
+    "darija": "kulshi bikhir",
+    "arabic": "كلشي بخير",
+    "english": "everything's fine",
+    "french": "tout va bien",
+    "pronunciation": "kul-SHI bi-KHIR",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-01172",
+    "darija": "7amdullah",
+    "arabic": "حمد لله",
+    "english": "praise God",
+    "french": "louange à Dieu",
+    "pronunciation": "HAM-dul-LAH",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-01174",
+    "darija": "ma tqllqsh",
+    "arabic": "ما تقلقش",
+    "english": "don't worry",
+    "french": "ne t'inquiète pas",
+    "pronunciation": "ma tql-LQSH",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-01178",
+    "darija": "tfddl",
+    "arabic": "تفضّل",
+    "english": "here you go / please sit",
+    "french": "voilà / asseyez-vous",
+    "pronunciation": "tf-DDL",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-01182",
+    "darija": "ma kayensh mushkil",
+    "arabic": "ما كاينش مشكيل",
+    "english": "no problem",
+    "french": "pas de problème",
+    "pronunciation": "ma KAY-ensh mush-KIL",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "greetings-01188",
+    "darija": "ma 3liksh",
+    "arabic": "ما عليكش",
+    "english": "never mind / it's OK",
+    "french": "pas grave",
+    "pronunciation": "ma 3LIK-sh",
+    "category": "greetings",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00393",
+    "darija": "ss7a",
+    "arabic": "الصحة",
+    "english": "health",
+    "french": "santé",
+    "pronunciation": "s-SHA",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00394",
+    "darija": "tbib",
+    "arabic": "طبيب",
+    "english": "doctor",
+    "french": "médecin",
+    "pronunciation": "t-BIB",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00395",
+    "darija": "wja3",
+    "arabic": "وجع",
+    "english": "pain",
+    "french": "douleur",
+    "pronunciation": "w-JA3",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00396",
+    "darija": "ras",
+    "arabic": "راس",
+    "english": "head",
+    "french": "tête",
+    "pronunciation": "RAS",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00397",
+    "darija": "krrsh",
+    "arabic": "كرش",
+    "english": "stomach",
+    "french": "ventre",
+    "pronunciation": "KRRSH",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00398",
+    "darija": "3in",
+    "arabic": "عين",
+    "english": "eye",
+    "french": "œil",
+    "pronunciation": "3IN",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00402",
+    "darija": "yedd",
+    "arabic": "يد",
+    "english": "hand",
+    "french": "main",
+    "pronunciation": "YEDD",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00403",
+    "darija": "rjl",
+    "arabic": "رجل",
+    "english": "leg/foot",
+    "french": "jambe/pied",
+    "pronunciation": "RJEL",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00404",
+    "darija": "qlb",
+    "arabic": "قلب",
+    "english": "heart",
+    "french": "cœur",
+    "pronunciation": "QLB",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00405",
+    "darija": "dwa",
+    "arabic": "دوا",
+    "english": "medicine",
+    "french": "médicament",
+    "pronunciation": "DWA",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00406",
+    "darija": "7bba",
+    "arabic": "حبّة",
+    "english": "pill",
+    "french": "comprimé",
+    "pronunciation": "HB-ba",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "health-00413",
+    "darija": "mrid",
+    "arabic": "مريض",
+    "english": "sick (m)",
+    "french": "malade",
+    "pronunciation": "m-RID",
+    "category": "health",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "home-00315",
+    "darija": "bit",
+    "arabic": "بيت",
+    "english": "room",
+    "french": "chambre",
+    "pronunciation": "BIT",
+    "category": "home",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "home-00317",
+    "darija": "7ammam",
+    "arabic": "حمام",
+    "english": "bathroom/hammam",
+    "french": "salle de bain",
+    "pronunciation": "ham-MAM",
+    "category": "home",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "home-00320",
+    "darija": "mftah",
+    "arabic": "مفتاح",
+    "english": "key",
+    "french": "clé",
+    "pronunciation": "MF-tah",
+    "category": "home",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "home-00326",
+    "darija": "ddu",
+    "arabic": "ضو",
+    "english": "light/electricity",
+    "french": "lumière",
+    "pronunciation": "DDU",
+    "category": "home",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "home-00328",
+    "darija": "tilifun",
+    "arabic": "تيليفون",
+    "english": "phone",
+    "french": "téléphone",
+    "pronunciation": "ti-li-FUN",
+    "category": "home",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "home-00329",
+    "darija": "sabun",
+    "arabic": "صابون",
+    "english": "soap",
+    "french": "savon",
+    "pronunciation": "sa-BUN",
+    "category": "home",
+    "part_of_speech": "noun",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "home-00331",
+    "darija": "wifi",
+    "arabic": "ويفي",
+    "english": "wifi",
+    "french": "wifi",
+    "pronunciation": "WI-fi",
+    "category": "home",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "money-00432",
+    "darija": "carte",
+    "arabic": "كارت",
+    "english": "card",
+    "french": "carte",
+    "pronunciation": "KART",
+    "category": "money",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00164",
+    "darija": "wahd",
+    "arabic": "واحد",
+    "english": "one",
+    "french": "un",
+    "pronunciation": "WAHD",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00165",
+    "darija": "juj",
+    "arabic": "جوج",
+    "english": "two",
+    "french": "deux",
+    "pronunciation": "JUJ",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00166",
+    "darija": "tlata",
+    "arabic": "تلاتة",
+    "english": "three",
+    "french": "trois",
+    "pronunciation": "TLA-ta",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00167",
+    "darija": "rb3a",
+    "arabic": "ربعة",
+    "english": "four",
+    "french": "quatre",
+    "pronunciation": "RB-3a",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00168",
+    "darija": "khmsa",
+    "arabic": "خمسة",
+    "english": "five",
+    "french": "cinq",
+    "pronunciation": "KHOM-sa",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00173",
+    "darija": "3shra",
+    "arabic": "عشرة",
+    "english": "ten",
+    "french": "dix",
+    "pronunciation": "3SH-ra",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00183",
+    "darija": "3shrin",
+    "arabic": "عشرين",
+    "english": "twenty",
+    "french": "vingt",
+    "pronunciation": "3SH-rin",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-00191",
+    "darija": "miya",
+    "arabic": "مية",
+    "english": "one hundred",
+    "french": "cent",
+    "pronunciation": "MI-ya",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-01193",
+    "darija": "nss",
+    "arabic": "نص",
+    "english": "half",
+    "french": "moitié/demi",
+    "pronunciation": "NSS",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "numbers-01196",
+    "darija": "zid",
+    "arabic": "زيد",
+    "english": "plus/add",
+    "french": "plus/ajouter",
+    "pronunciation": "ZID",
+    "category": "numbers",
+    "part_of_speech": "numeral",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00658",
+    "darija": "ana",
+    "arabic": "أنا",
+    "english": "I/me",
+    "french": "je/moi",
+    "pronunciation": "A-na",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00659",
+    "darija": "nta",
+    "arabic": "نتا",
+    "english": "you (m)",
+    "french": "tu/toi (m)",
+    "pronunciation": "N-ta",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00660",
+    "darija": "nti",
+    "arabic": "نتي",
+    "english": "you (f)",
+    "french": "tu/toi (f)",
+    "pronunciation": "N-ti",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00661",
+    "darija": "huwa",
+    "arabic": "هو",
+    "english": "he/him",
+    "french": "il/lui",
+    "pronunciation": "HU-wa",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00662",
+    "darija": "hiya",
+    "arabic": "هي",
+    "english": "she/her",
+    "french": "elle",
+    "pronunciation": "HI-ya",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00663",
+    "darija": "7na",
+    "arabic": "حنا",
+    "english": "we/us",
+    "french": "nous",
+    "pronunciation": "H-na",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00664",
+    "darija": "ntuma",
+    "arabic": "نتوما",
+    "english": "you (plural)",
+    "french": "vous",
+    "pronunciation": "n-TU-ma",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00665",
+    "darija": "huma",
+    "arabic": "هوما",
+    "english": "they/them",
+    "french": "ils/eux",
+    "pronunciation": "HU-ma",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00666",
+    "darija": "hada",
+    "arabic": "هادا",
+    "english": "this (m)",
+    "french": "celui-ci",
+    "pronunciation": "HA-da",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00667",
+    "darija": "hadi",
+    "arabic": "هادي",
+    "english": "this (f)",
+    "french": "celle-ci",
+    "pronunciation": "HA-di",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00670",
+    "darija": "dyal",
+    "arabic": "ديال",
+    "english": "of/belonging to",
+    "french": "de/à",
+    "pronunciation": "DYAL",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00671",
+    "darija": "f",
+    "arabic": "ف",
+    "english": "in/at",
+    "french": "dans/à",
+    "pronunciation": "F",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00672",
+    "darija": "mn",
+    "arabic": "من",
+    "english": "from",
+    "french": "de/depuis",
+    "pronunciation": "MN",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00673",
+    "darija": "m3a",
+    "arabic": "مع",
+    "english": "with",
+    "french": "avec",
+    "pronunciation": "M3A",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00674",
+    "darija": "3la",
+    "arabic": "على",
+    "english": "on/about",
+    "french": "sur/à propos",
+    "pronunciation": "3LA",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00675",
+    "darija": "l",
+    "arabic": "ل",
+    "english": "to/for",
+    "french": "à/pour",
+    "pronunciation": "L",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00676",
+    "darija": "bla",
+    "arabic": "بلا",
+    "english": "without",
+    "french": "sans",
+    "pronunciation": "BLA",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00677",
+    "darija": "b",
+    "arabic": "ب",
+    "english": "with/by",
+    "french": "avec/par",
+    "pronunciation": "B",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00678",
+    "darija": "lli",
+    "arabic": "اللي",
+    "english": "who/that/which",
+    "french": "qui/que",
+    "pronunciation": "LLI",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00679",
+    "darija": "wash",
+    "arabic": "واش",
+    "english": "question particle",
+    "french": "est-ce que",
+    "pronunciation": "WASH",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00680",
+    "darija": "ma...sh",
+    "arabic": "ما...ش",
+    "english": "negation (wraps verb)",
+    "french": "ne...pas",
+    "pronunciation": "ma...SH",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00681",
+    "darija": "ghadi",
+    "arabic": "غادي",
+    "english": "going to (future)",
+    "french": "aller (futur)",
+    "pronunciation": "GHA-di",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "pronouns-00682",
+    "darija": "kan",
+    "arabic": "كان",
+    "english": "was/were (past)",
+    "french": "était",
+    "pronunciation": "KAN",
+    "category": "pronouns",
+    "part_of_speech": "pronoun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "religion-00442",
+    "darija": "ramdan",
+    "arabic": "رمضان",
+    "english": "Ramadan",
+    "french": "Ramadan",
+    "pronunciation": "ram-DAN",
+    "category": "religion",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "culture"
+    ]
+  },
+  {
+    "id": "religion-00443",
+    "darija": "l3id",
+    "arabic": "العيد",
+    "english": "Eid / holiday",
+    "french": "fête",
+    "pronunciation": "l-3ID",
+    "category": "religion",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "culture"
+    ]
+  },
+  {
+    "id": "religion-00446",
+    "darija": "halal",
+    "arabic": "حلال",
+    "english": "halal/permitted",
+    "french": "halal",
+    "pronunciation": "ha-LAL",
+    "category": "religion",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "religion-00447",
+    "darija": "7ram",
+    "arabic": "حرام",
+    "english": "forbidden/sin",
+    "french": "interdit/péché",
+    "pronunciation": "h-RAM",
+    "category": "religion",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "religion-00453",
+    "darija": "lla y3tik ss7a",
+    "arabic": "الله يعطيك الصحة",
+    "english": "God give you health",
+    "french": "que Dieu te donne la santé",
+    "pronunciation": "lla y3-TIK s-SHA",
+    "category": "religion",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "blessings"
+    ]
+  },
+  {
+    "id": "religion-00458",
+    "darija": "lla ybark",
+    "arabic": "الله يبارك",
+    "english": "God bless",
+    "french": "que Dieu bénisse",
+    "pronunciation": "lla y-BARK",
+    "category": "religion",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "blessings"
+    ]
+  },
+  {
+    "id": "religion-00460",
+    "darija": "sma7 lia",
+    "arabic": "سمح ليا",
+    "english": "forgive me",
+    "french": "pardonne-moi",
+    "pronunciation": "sma7 LIA",
+    "category": "religion",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "shopping-00126",
+    "darija": "ghali",
+    "arabic": "غالي",
+    "english": "expensive",
+    "french": "cher",
+    "pronunciation": "GHA-li",
+    "category": "shopping",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "first-day",
+      "survival"
+    ]
+  },
+  {
+    "id": "shopping-00127",
+    "darija": "rkhis",
+    "arabic": "رخيص",
+    "english": "cheap",
+    "french": "pas cher / bon marché",
+    "pronunciation": "r-KHIS",
+    "category": "shopping",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "shopping-00128",
+    "darija": "taman",
+    "arabic": "تمن",
+    "english": "price",
+    "french": "prix",
+    "pronunciation": "TA-man",
+    "category": "shopping",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "shopping-00129",
+    "darija": "nqss",
+    "arabic": "نقص",
+    "english": "reduce / lower the price",
+    "french": "baisser / réduire",
+    "pronunciation": "NQSS",
+    "category": "shopping",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "shopping-00130",
+    "darija": "shri",
+    "arabic": "شري",
+    "english": "buy",
+    "french": "acheter",
+    "pronunciation": "SHRI",
+    "category": "shopping",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "shopping-00131",
+    "darija": "ba3",
+    "arabic": "باع",
+    "english": "sell",
+    "french": "vendre",
+    "pronunciation": "BA3",
+    "category": "shopping",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "shopping-00134",
+    "darija": "shkoura",
+    "arabic": "شكارة",
+    "english": "bag",
+    "french": "sac",
+    "pronunciation": "shku-RA",
+    "category": "shopping",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "shopping-00135",
+    "darija": "khlass",
+    "arabic": "خلاص",
+    "english": "pay / payment",
+    "french": "payer / paiement",
+    "pronunciation": "kh-LASS",
+    "category": "shopping",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "shopping-00136",
+    "darija": "sarf",
+    "arabic": "صرف",
+    "english": "change / exchange",
+    "french": "change / échange",
+    "pronunciation": "SARF",
+    "category": "shopping",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "shopping-00140",
+    "darija": "kilu",
+    "arabic": "كيلو",
+    "english": "kilogram",
+    "french": "kilogramme",
+    "pronunciation": "KI-lu",
+    "category": "shopping",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "slang-00747",
+    "darija": "hmdullah 3la sslama",
+    "arabic": "الحمد لله على السلامة",
+    "english": "welcome back / glad you're safe",
+    "french": "bon retour",
+    "pronunciation": "hm-DUL-lah 3la s-SLA-ma",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00749",
+    "darija": "mashi mushkil",
+    "arabic": "ماشي مشكيل",
+    "english": "no problem",
+    "french": "pas de problème",
+    "pronunciation": "ma-SHI mush-KIL",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00756",
+    "darija": "yak labas",
+    "arabic": "ياك لاباس",
+    "english": "everything OK right?",
+    "french": "tout va bien ?",
+    "pronunciation": "yak la-BAS",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00757",
+    "darija": "hadshi",
+    "arabic": "هادشي",
+    "english": "this stuff / this thing",
+    "french": "ce truc / cette chose",
+    "pronunciation": "had-SHI",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00758",
+    "darija": "bzaf",
+    "arabic": "بزاف",
+    "english": "a lot",
+    "french": "beaucoup",
+    "pronunciation": "b-ZAF",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00759",
+    "darija": "3la slama",
+    "arabic": "على السلامة",
+    "english": "goodbye (safe journey)",
+    "french": "bonne route",
+    "pronunciation": "3la s-LA-ma",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00761",
+    "darija": "aji hna",
+    "arabic": "أجي هنا",
+    "english": "come here",
+    "french": "viens ici",
+    "pronunciation": "A-ji HNA",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00763",
+    "darija": "3ndek l7gg",
+    "arabic": "عندك الحق",
+    "english": "you're right",
+    "french": "tu as raison",
+    "pronunciation": "3n-DEK l-HGG",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "slang-00766",
+    "darija": "matkhafsh",
+    "arabic": "ماتخافش",
+    "english": "don't be afraid",
+    "french": "n'aie pas peur",
+    "pronunciation": "mat-KHAF-sh",
+    "category": "slang",
+    "part_of_speech": "interjection",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "survival-00727",
+    "darija": "3wnni",
+    "arabic": "عاوني",
+    "english": "help me",
+    "french": "aide-moi",
+    "pronunciation": "3WN-ni",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00728",
+    "darija": "fin kayn...",
+    "arabic": "فين كاين...",
+    "english": "where is...",
+    "french": "où est...",
+    "pronunciation": "fin KAYN",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00729",
+    "darija": "bsh7al",
+    "arabic": "بشحال",
+    "english": "how much",
+    "french": "combien",
+    "pronunciation": "bsh-HAL",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00730",
+    "darija": "ma bghitsh",
+    "arabic": "ما بغيتش",
+    "english": "I don't want",
+    "french": "je ne veux pas",
+    "pronunciation": "ma BGHIT-sh",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00731",
+    "darija": "ma fhmtsh",
+    "arabic": "ما فهمتش",
+    "english": "I don't understand",
+    "french": "je ne comprends pas",
+    "pronunciation": "ma FHMT-sh",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00732",
+    "darija": "3awtni mn fdlk",
+    "arabic": "عاوتني من فضلك",
+    "english": "repeat please",
+    "french": "répétez s'il vous plaît",
+    "pronunciation": "3AWT-ni mn FD-lk",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00733",
+    "darija": "kantkllm shwiya",
+    "arabic": "كنتكلم شوية",
+    "english": "I speak a little",
+    "french": "je parle un peu",
+    "pronunciation": "kan-TK-llm SHWI-ya",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00734",
+    "darija": "khasni nmshi",
+    "arabic": "خاصني نمشي",
+    "english": "I need to go",
+    "french": "je dois partir",
+    "pronunciation": "khas-NI NM-shi",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00735",
+    "darija": "fin l7ammam",
+    "arabic": "فين الحمام",
+    "english": "where is the bathroom",
+    "french": "où sont les toilettes",
+    "pronunciation": "fin l-ham-MAM",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00736",
+    "darija": "3ndi 7sasiya",
+    "arabic": "عندي حساسية",
+    "english": "I have an allergy",
+    "french": "j'ai une allergie",
+    "pronunciation": "3n-DI h-sa-SI-ya",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00737",
+    "darija": "ana turistt",
+    "arabic": "أنا توريست",
+    "english": "I'm a tourist",
+    "french": "je suis touriste",
+    "pronunciation": "a-NA tu-RIST",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00738",
+    "darija": "la merci",
+    "arabic": "لا ميرسي",
+    "english": "no thank you",
+    "french": "non merci",
+    "pronunciation": "la MER-si",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00739",
+    "darija": "wash kayn shi...",
+    "arabic": "واش كاين شي...",
+    "english": "is there a...",
+    "french": "est-ce qu'il y a un...",
+    "pronunciation": "wash KAYN shi",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00740",
+    "darija": "bghit ntslf tilifun",
+    "arabic": "بغيت نتسلف تيليفون",
+    "english": "I want to borrow a phone",
+    "french": "je veux emprunter un téléphone",
+    "pronunciation": "bghit nt-SLEF ti-li-FUN",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00741",
+    "darija": "wdini l...",
+    "arabic": "وديني ل...",
+    "english": "take me to...",
+    "french": "emmène-moi à...",
+    "pronunciation": "wdi-NI l",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00742",
+    "darija": "ghali bzzaf, nqss",
+    "arabic": "غالي بزاف، نقص",
+    "english": "too expensive, lower",
+    "french": "trop cher, baissez",
+    "pronunciation": "GHA-li bz-ZAF NQSS",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00743",
+    "darija": "wash hada halal?",
+    "arabic": "واش هادا حلال؟",
+    "english": "is this halal?",
+    "french": "est-ce que c'est halal ?",
+    "pronunciation": "wash HA-da ha-LAL",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00744",
+    "darija": "fiya ju3",
+    "arabic": "فيا الجوع",
+    "english": "I'm hungry",
+    "french": "j'ai faim",
+    "pronunciation": "fi-YA l-JU3",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00745",
+    "darija": "fiya l3tsh",
+    "arabic": "فيا العطش",
+    "english": "I'm thirsty",
+    "french": "j'ai soif",
+    "pronunciation": "fi-YA l-3TSH",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-00746",
+    "darija": "shno hada?",
+    "arabic": "شنو هادا؟",
+    "english": "what is this?",
+    "french": "c'est quoi ça ?",
+    "pronunciation": "SHNO HA-da",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01590",
+    "darija": "ana dayikh",
+    "arabic": "أنا دايخ",
+    "english": "I'm dizzy",
+    "french": "j'ai le vertige",
+    "pronunciation": "a-NA DAY-ikh",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01591",
+    "darija": "ma bghitsh shukran",
+    "arabic": "ما بغيتش شكراً",
+    "english": "no thanks",
+    "french": "non merci",
+    "pronunciation": "ma BGHIT-sh SHUK-ran",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01592",
+    "darija": "wash tqdr t3awni?",
+    "arabic": "واش تقدر تعاوني؟",
+    "english": "can you help me?",
+    "french": "tu peux m'aider ?",
+    "pronunciation": "wash tq-DER t-3AW-ni",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01593",
+    "darija": "mashi ana",
+    "arabic": "ماشي أنا",
+    "english": "not me",
+    "french": "ce n'est pas moi",
+    "pronunciation": "ma-SHI A-na",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01594",
+    "darija": "3afak tkllm b shwiya",
+    "arabic": "عافاك تكلم بشوية",
+    "english": "speak slowly please",
+    "french": "parlez lentement",
+    "pronunciation": "3a-FAK tk-LLM b SHWI-ya",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01595",
+    "darija": "fin nqdr nshri sim?",
+    "arabic": "فين نقدر نشري سيم؟",
+    "english": "where to buy a SIM?",
+    "french": "où acheter une SIM ?",
+    "pronunciation": "fin NQ-dr n-SHRI SIM",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01596",
+    "darija": "wash kayn DAB qrib?",
+    "arabic": "واش كاين داب قريب؟",
+    "english": "is there an ATM nearby?",
+    "french": "distributeur près d'ici ?",
+    "pronunciation": "wash KAYN DAB QRIB",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01597",
+    "darija": "3ndek charger?",
+    "arabic": "عندك شارجير؟",
+    "english": "have a charger?",
+    "french": "tu as un chargeur ?",
+    "pronunciation": "3n-DEK shar-JEER",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01598",
+    "darija": "wash ymkn wifi?",
+    "arabic": "واش يمكن ويفي؟",
+    "english": "can I use wifi?",
+    "french": "je peux utiliser le wifi ?",
+    "pronunciation": "wash YM-kn WI-fi",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01599",
+    "darija": "bghit n7jz lbit",
+    "arabic": "بغيت نحجز البيت",
+    "english": "I want to book a room",
+    "french": "je veux réserver",
+    "pronunciation": "bghit n-HJZ l-BIT",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01600",
+    "darija": "wash hada bnin?",
+    "arabic": "واش هادا بنين؟",
+    "english": "is this tasty?",
+    "french": "c'est bon ?",
+    "pronunciation": "wash HA-da b-NIN",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01601",
+    "darija": "gha nmshi",
+    "arabic": "غا نمشي",
+    "english": "I'm leaving",
+    "french": "je vais partir",
+    "pronunciation": "GHA NM-shi",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01602",
+    "darija": "fash7al ttaxi?",
+    "arabic": "فشحال الطاكسي؟",
+    "english": "how much is the taxi?",
+    "french": "combien le taxi ?",
+    "pronunciation": "fsh-HAL t-TAK-si",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01603",
+    "darija": "wash hada msawb?",
+    "arabic": "واش هادا مصاوب؟",
+    "english": "is this correct?",
+    "french": "c'est correct ?",
+    "pronunciation": "wash HA-da m-SAWB",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "survival-01604",
+    "darija": "wash 3ndkum lbit khawy?",
+    "arabic": "واش عندكم البيت خاوي؟",
+    "english": "room available?",
+    "french": "chambre libre ?",
+    "pronunciation": "wash 3nd-KUM l-BIT KHA-wi",
+    "category": "survival",
+    "part_of_speech": "phrase",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "time-00337",
+    "darija": "lyum",
+    "arabic": "اليوم",
+    "english": "today",
+    "french": "aujourd'hui",
+    "pronunciation": "l-YUM",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00338",
+    "darija": "lbar7",
+    "arabic": "البارح",
+    "english": "yesterday",
+    "french": "hier",
+    "pronunciation": "l-BARH",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00339",
+    "darija": "daba",
+    "arabic": "دابا",
+    "english": "now",
+    "french": "maintenant",
+    "pronunciation": "DA-ba",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00341",
+    "darija": "ss3a",
+    "arabic": "الساعة",
+    "english": "hour/time",
+    "french": "heure",
+    "pronunciation": "s-SA3a",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00343",
+    "darija": "nhar",
+    "arabic": "نهار",
+    "english": "day",
+    "french": "jour",
+    "pronunciation": "N-HAR",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00344",
+    "darija": "lil",
+    "arabic": "ليل",
+    "english": "night",
+    "french": "nuit",
+    "pronunciation": "LIL",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00345",
+    "darija": "sbah",
+    "arabic": "صباح",
+    "english": "morning",
+    "french": "matin",
+    "pronunciation": "SBAH",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00359",
+    "darija": "dima",
+    "arabic": "ديما",
+    "english": "always",
+    "french": "toujours",
+    "pronunciation": "DI-ma",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00362",
+    "darija": "mazal",
+    "arabic": "مازال",
+    "english": "still/not yet",
+    "french": "encore/pas encore",
+    "pronunciation": "ma-ZAL",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "time-00363",
+    "darija": "b shwiya",
+    "arabic": "بشوية",
+    "english": "slowly",
+    "french": "lentement",
+    "pronunciation": "b SHWI-ya",
+    "category": "time",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "transport-00143",
+    "darija": "tobis",
+    "arabic": "طوبيس",
+    "english": "bus",
+    "french": "bus",
+    "pronunciation": "TO-bis",
+    "category": "transport",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "transport-00144",
+    "darija": "tran",
+    "arabic": "تران",
+    "english": "train",
+    "french": "train",
+    "pronunciation": "TRAN",
+    "category": "transport",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "transport-00145",
+    "darija": "tmshi",
+    "arabic": "تمشي",
+    "english": "you go (to a man)",
+    "french": "tu vas",
+    "pronunciation": "TM-shi",
+    "category": "transport",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "transport-00146",
+    "darija": "wqf",
+    "arabic": "وقف",
+    "english": "stop",
+    "french": "arrête / stop",
+    "pronunciation": "WQF",
+    "category": "transport",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "transport-00147",
+    "darija": "sir",
+    "arabic": "سير",
+    "english": "go (command)",
+    "french": "va",
+    "pronunciation": "SIR",
+    "category": "transport",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "transport-00148",
+    "darija": "dwr",
+    "arabic": "دور",
+    "english": "turn",
+    "french": "tourne",
+    "pronunciation": "DUR",
+    "category": "transport",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "transport-00149",
+    "darija": "nishaan",
+    "arabic": "نيشان",
+    "english": "straight ahead",
+    "french": "tout droit",
+    "pronunciation": "ni-SHAN",
+    "category": "transport",
+    "part_of_speech": "adverb",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "transport-00150",
+    "darija": "limin",
+    "arabic": "اليمين",
+    "english": "right",
+    "french": "droite",
+    "pronunciation": "li-MIN",
+    "category": "transport",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "transport-00151",
+    "darija": "lisir",
+    "arabic": "اليسير",
+    "english": "left",
+    "french": "gauche",
+    "pronunciation": "li-SIR",
+    "category": "transport",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "transport-00152",
+    "darija": "b3id",
+    "arabic": "بعيد",
+    "english": "far",
+    "french": "loin",
+    "pronunciation": "b-3ID",
+    "category": "transport",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "transport-00153",
+    "darija": "qrib",
+    "arabic": "قريب",
+    "english": "near / close",
+    "french": "proche",
+    "pronunciation": "QRIB",
+    "category": "transport",
+    "part_of_speech": "adjective",
+    "tags": [
+      "essential",
+      "survival",
+      "directions"
+    ]
+  },
+  {
+    "id": "transport-00154",
+    "darija": "tomobil",
+    "arabic": "طوموبيل",
+    "english": "car",
+    "french": "voiture",
+    "pronunciation": "to-mo-BIL",
+    "category": "transport",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "transport-00155",
+    "darija": "mushi",
+    "arabic": "موشي",
+    "english": "motorbike / moped",
+    "french": "moto",
+    "pronunciation": "MU-shi",
+    "category": "transport",
+    "part_of_speech": "noun",
+    "tags": [
+      "survival"
+    ]
+  },
+  {
+    "id": "transport-00157",
+    "darija": "la gare",
+    "arabic": "لا غار",
+    "english": "train station",
+    "french": "gare",
+    "pronunciation": "la GAR",
+    "category": "transport",
+    "part_of_speech": "noun",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "transport-00162",
+    "darija": "khrj",
+    "arabic": "خرج",
+    "english": "go out / exit",
+    "french": "sortir",
+    "pronunciation": "KHRJ",
+    "category": "transport",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential",
+      "survival"
+    ]
+  },
+  {
+    "id": "transport-00163",
+    "darija": "dkhl",
+    "arabic": "دخل",
+    "english": "enter / go in",
+    "french": "entrer",
+    "pronunciation": "DKHL",
+    "category": "transport",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00262",
+    "darija": "ja",
+    "arabic": "جا",
+    "english": "to come",
+    "french": "venir",
+    "pronunciation": "JA",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00263",
+    "darija": "kla",
+    "arabic": "كلا",
+    "english": "to eat",
+    "french": "manger",
+    "pronunciation": "KLA",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00264",
+    "darija": "nwwd",
+    "arabic": "نوّض",
+    "english": "to wake up",
+    "french": "se réveiller",
+    "pronunciation": "n-WWD",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00265",
+    "darija": "n3s",
+    "arabic": "نعس",
+    "english": "to sleep",
+    "french": "dormir",
+    "pronunciation": "N3S",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00266",
+    "darija": "gls",
+    "arabic": "گلس",
+    "english": "to sit",
+    "french": "s'asseoir",
+    "pronunciation": "GLES",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00268",
+    "darija": "sm3",
+    "arabic": "سمع",
+    "english": "to hear",
+    "french": "entendre",
+    "pronunciation": "SMA3",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00270",
+    "darija": "3rf",
+    "arabic": "عرف",
+    "english": "to know",
+    "french": "savoir",
+    "pronunciation": "3RF",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00271",
+    "darija": "fhm",
+    "arabic": "فهم",
+    "english": "to understand",
+    "french": "comprendre",
+    "pronunciation": "FHEM",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00275",
+    "darija": "3ta",
+    "arabic": "عطى",
+    "english": "to give",
+    "french": "donner",
+    "pronunciation": "3TA",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00276",
+    "darija": "khda",
+    "arabic": "خدا",
+    "english": "to take",
+    "french": "prendre",
+    "pronunciation": "KHDA",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00277",
+    "darija": "lqa",
+    "arabic": "لقى",
+    "english": "to find",
+    "french": "trouver",
+    "pronunciation": "LQA",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00278",
+    "darija": "shra",
+    "arabic": "شرا",
+    "english": "to buy",
+    "french": "acheter",
+    "pronunciation": "SHRA",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00279",
+    "darija": "khdm",
+    "arabic": "خدم",
+    "english": "to work",
+    "french": "travailler",
+    "pronunciation": "KHDEM",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00282",
+    "darija": "tsna",
+    "arabic": "تسنى",
+    "english": "to wait",
+    "french": "attendre",
+    "pronunciation": "TS-na",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00283",
+    "darija": "rj3",
+    "arabic": "رجع",
+    "english": "to return",
+    "french": "revenir",
+    "pronunciation": "RJ3",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00284",
+    "darija": "wssl",
+    "arabic": "وصل",
+    "english": "to arrive",
+    "french": "arriver",
+    "pronunciation": "WS-sl",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00285",
+    "darija": "bda",
+    "arabic": "بدا",
+    "english": "to start",
+    "french": "commencer",
+    "pronunciation": "BDA",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00286",
+    "darija": "kml",
+    "arabic": "كمل",
+    "english": "to finish",
+    "french": "finir",
+    "pronunciation": "KMEL",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00287",
+    "darija": "7ll",
+    "arabic": "حل",
+    "english": "to open",
+    "french": "ouvrir",
+    "pronunciation": "HLL",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00292",
+    "darija": "jab",
+    "arabic": "جاب",
+    "english": "to bring",
+    "french": "apporter",
+    "pronunciation": "JAB",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00311",
+    "darija": "skn",
+    "arabic": "سكن",
+    "english": "to live/reside",
+    "french": "habiter",
+    "pronunciation": "SKEN",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  },
+  {
+    "id": "verbs-00312",
+    "darija": "khllss",
+    "arabic": "خلّص",
+    "english": "to pay",
+    "french": "payer",
+    "pronunciation": "khl-LSS",
+    "category": "verbs",
+    "part_of_speech": "verb",
+    "tags": [
+      "essential"
+    ]
+  }
+]
