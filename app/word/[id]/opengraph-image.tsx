@@ -26,43 +26,51 @@ export const contentType = 'image/png';
  *
  * Renders at 1200×630 (universal OG / Twitter / Pinterest acceptable).
  */
-export default async function Image({ params }: { params: { id: string } }) {
-  const word = await getWordById(params.id);
-
-  // Pre-shape Arabic for Satori (which doesn't run OpenType shaping in this version)
-  const arabicShaped = word ? shapeArabicForOg(word.arabic) : '';
-  const ornamentShaped = shapeArabicForOg('دارجة');
-
-  // Amiri — classical Naskh-style Arabic font, open source. Bundled
-  // because (a) ImageResponse can't use system fonts, (b) Amiri's
-  // ligature tables are compatible with @vercel/og (Noto Naskh isn't).
-  const arabicFont = await readFile(
-    path.join(process.cwd(), 'app/_og-fonts/amiri-regular.woff')
-  ).catch(() => null);
-
-  if (!word) {
-    return new ImageResponse(
-      (
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: '#fbf7f1',
-            color: '#c53a1a',
-            fontSize: 48,
-          }}
-        >
-          darija.io
-        </div>
-      ),
-      { ...size }
-    );
-  }
-
+function fallbackCard() {
   return new ImageResponse(
+    (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: '#fbf7f1',
+          color: '#c53a1a',
+          fontSize: 48,
+        }}
+      >
+        darija.io
+      </div>
+    ),
+    { ...size }
+  );
+}
+
+export default async function Image({ params }: { params: { id: string } }) {
+  try {
+    const word = await getWordById(params.id);
+
+    if (!word) return fallbackCard();
+
+    // Guard against missing required fields — otherwise shaping/rendering 5xx.
+    if (typeof word.arabic !== 'string' || word.arabic.length === 0) return fallbackCard();
+    if (typeof word.darija !== 'string' || word.darija.length === 0) return fallbackCard();
+    if (typeof word.english !== 'string' || word.english.length === 0) return fallbackCard();
+
+    // Pre-shape Arabic for Satori (which doesn't run OpenType shaping in this version)
+    const arabicShaped = shapeArabicForOg(word.arabic);
+    const ornamentShaped = shapeArabicForOg('دارجة');
+
+    // Amiri — classical Naskh-style Arabic font, open source. Bundled
+    // because (a) ImageResponse can't use system fonts, (b) Amiri's
+    // ligature tables are compatible with @vercel/og (Noto Naskh isn't).
+    const arabicFont = await readFile(
+      path.join(process.cwd(), 'app/_og-fonts/amiri-regular.woff')
+    ).catch(() => null);
+
+    return new ImageResponse(
     (
       <div
         style={{
@@ -188,4 +196,8 @@ export default async function Image({ params }: { params: { id: string } }) {
         : [],
     }
   );
+  } catch (err) {
+    console.error('[opengraph-image] render failed', { id: params.id, err });
+    return fallbackCard();
+  }
 }
