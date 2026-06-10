@@ -28,8 +28,10 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const phrases = await getAllPhrases();
-  // Only prerender pages that are also in the sitemap.
-  return phrases.filter(isPhraseWorthy).map(p => ({ id: p.id }));
+  // Prerender every phrase. The handful that fail isPhraseWorthy() (~21)
+  // get robots noindex via generateMetadata below — soft exclusion beats
+  // 404ing URLs Google has already crawled.
+  return phrases.map(p => ({ id: p.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -59,6 +61,11 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       siteName: 'Everyday Darija',
       // images intentionally omitted — Next auto-uses opengraph-image.tsx
       // in this segment, which generates a per-phrase card.
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${phrase.darija} — ${phrase.english} | Darija Phrase`,
+      description,
     },
     alternates: {
       canonical: `${SITE_URL}/phrase/${id}`,
