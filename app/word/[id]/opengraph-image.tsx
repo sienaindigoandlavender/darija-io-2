@@ -13,6 +13,14 @@ export const alt = 'Darija word card';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
+// These image URLs kept showing up in Search Console (18 of them as 5xx).
+// They are share-card assets, not pages: noindex them and let the CDN cache
+// renders for a year so Googlebot stops triggering fresh ImageResponse runs.
+const OG_HEADERS = {
+  'X-Robots-Tag': 'noindex',
+  'Cache-Control': 'public, max-age=31536000, s-maxage=31536000, immutable',
+};
+
 /**
  * Per-word share card.
  *
@@ -44,7 +52,7 @@ function fallbackCard() {
         darija.io
       </div>
     ),
-    { ...size }
+    { ...size, headers: OG_HEADERS }
   );
 }
 
@@ -184,6 +192,7 @@ export default async function Image({ params }: { params: { id: string } }) {
     ),
     {
       ...size,
+      headers: OG_HEADERS,
       fonts: arabicFont
         ? [
             {

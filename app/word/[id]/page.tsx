@@ -1,4 +1,4 @@
-import { getWordById, getAllWords, getWordsByRoot, isWordWorthy } from '@/lib/dictionary';
+import { getWordById, getAllWords, getWordsByRoot } from '@/lib/dictionary';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -25,11 +25,13 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const words = await getAllWords();
-  // Only prerender pages that are also in the sitemap, and skip pages whose
-  // canonical points elsewhere (those are duplicates that don't need their
-  // own static HTML).
+  // Prerender every non-duplicate word. All 10k entries have complete core
+  // fields (darija/arabic/english/pronunciation) and each page renders unique
+  // lexical content plus the prose "How to say" block — GSC data shows Google
+  // indexes these happily and they drive the site's impression growth.
+  // Restricting this to isWordWorthy() would 404 ~9,600 already-indexed
+  // pages; the right response to thinness is enrichment, not removal.
   return words
-    .filter(isWordWorthy)
     .filter(w => !CANONICAL_OVERRIDES[w.id])
     .map(w => ({ id: w.id }));
 }
@@ -37,14 +39,6 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const word = await getWordById(params.id);
   if (!word) return { title: 'Word Not Found' };
-
-  const isThin =
-    !word.cultural_note &&
-    (!word.examples || word.examples.length === 0) &&
-    !word.audio_url &&
-    !(word.tags || []).some((t: string) =>
-      ['essential', 'first-day', 'common', 'basic', 'survival'].includes(t)
-    );
 
   const locale = await getLocale();
   const meaning = locale === 'fr' && word.french ? word.french : word.english;
@@ -65,13 +59,19 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   return {
     title: overrideTitle ? { absolute: overrideTitle } : title,
     description,
-    robots: isThin ? { index: false, follow: true } : undefined,
     openGraph: {
       title: overrideTitle || title,
       description,
       url,
       // images intentionally omitted — Next auto-uses opengraph-image.tsx
       // in this segment, which generates a per-word card.
+    },
+    // Without this, Twitter/X cards fall back to the generic site-wide
+    // title/description defined in the root layout.
+    twitter: {
+      card: 'summary_large_image',
+      title: overrideTitle || title,
+      description,
     },
     alternates: {
       canonical: canonicalUrl,
@@ -89,12 +89,11 @@ export default async function WordPage({ params }: { params: { id: string } }) {
   const meaning = locale === 'fr' && word.french ? word.french : word.english;
   const secondary = locale === 'fr' ? word.english : word.french;
 
-  // Same-root words (only fetched if word.root is set). Filter to worthy,
-  // non-canonicalized siblings so we don't link to pages that 404 or
-  // canonicalize away.
+  // Same-root words (only fetched if word.root is set). Skip canonicalized
+  // duplicates so we don't link to URLs that redirect away.
   const sameRoot = word.root
     ? (await getWordsByRoot(word.root, word.id)).filter(
-        w => isWordWorthy(w) && !CANONICAL_OVERRIDES[w.id]
+        w => !CANONICAL_OVERRIDES[w.id]
       )
     : [];
 
@@ -109,7 +108,6 @@ export default async function WordPage({ params }: { params: { id: string } }) {
     description: word.english,
     inLanguage: 'ar',
     url,
-    dateModified: new Date().toISOString().split('T')[0],
     inDefinedTermSet: {
       '@type': 'DefinedTermSet',
       name: 'Everyday Darija Dictionary',
