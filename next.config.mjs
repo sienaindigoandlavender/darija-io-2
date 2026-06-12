@@ -22,11 +22,13 @@ const nextConfig = {
       // Old Slow Morocco /darija paths → darija.io equivalents
       { source: '/dictionary', destination: '/', permanent: true },
       { source: '/dictionary/:id', destination: '/word/:id', permanent: true },
-      { source: '/phrases', destination: '/', permanent: true },
+      // Old "phrases" section maps to the how-to-say hub, not the homepage
+      { source: '/phrases', destination: '/how-to-say', permanent: true },
       { source: '/access', destination: '/', permanent: true },
 
-      // Old dictionary verb paths (Slow Morocco redirects these here)
-      { source: '/dictionary/verbs-:id', destination: '/', permanent: true },
+      // (Removed dead rule '/dictionary/verbs-:id' — it could never fire
+      // because '/dictionary/:id' above matches first. All verbs-* IDs
+      // exist as real words, so /word/verbs-XXXXX is the correct target.)
 
       // dharija.space legacy paths
       { source: '/darija', destination: '/', permanent: true },
