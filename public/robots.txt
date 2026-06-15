@@ -13,6 +13,11 @@ User-agent: *
 Allow: /
 Disallow: /api/contact
 Disallow: /api/subscribe
+# OG share-card images: noindex assets, not pages. Blocking them stops
+# Googlebot from spending crawl budget on ~10k dynamic image renders
+# (which intermittently 5xx under rapid crawling and clutter Search Console).
+Disallow: /*/opengraph-image
+Disallow: /*/twitter-image
 
 # Retrieval / citation crawlers — welcome
 # (these visit on demand and link the user back to the source)
