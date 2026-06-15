@@ -67,9 +67,18 @@ export default async function Image({ params }: { params: { id: string } }) {
     if (typeof word.darija !== 'string' || word.darija.length === 0) return fallbackCard();
     if (typeof word.english !== 'string' || word.english.length === 0) return fallbackCard();
 
-    // Pre-shape Arabic for Satori (which doesn't run OpenType shaping in this version)
-    const arabicShaped = shapeArabicForOg(word.arabic);
-    const ornamentShaped = shapeArabicForOg('دارجة');
+    // Pre-shape Arabic for Satori (which doesn't run OpenType shaping in this version).
+    // Wrapped so a shaping throw on an unusual codepoint degrades to the raw
+    // Arabic (still renders, just less perfectly) instead of 5xx-ing the route.
+    let arabicShaped: string;
+    let ornamentShaped: string;
+    try {
+      arabicShaped = shapeArabicForOg(word.arabic);
+      ornamentShaped = shapeArabicForOg('دارجة');
+    } catch {
+      arabicShaped = word.arabic;
+      ornamentShaped = 'دارجة';
+    }
 
     // Amiri — classical Naskh-style Arabic font, open source. Bundled
     // because (a) ImageResponse can't use system fonts, (b) Amiri's
