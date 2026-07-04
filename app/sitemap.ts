@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import words from '@/data/words.json';
 import phrases from '@/data/phrases.json';
+import canonicalOverrides from '@/data/canonical-overrides.json';
 import { getPrioritizedHowToSaySlugs, slugifyTerm } from '@/lib/howToSay';
 import {
   isWordWorthy,
@@ -59,10 +60,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Duplicate words 301-redirect to their canonical sibling — never list
+  // them in the sitemap (a sitemap must only contain final, 200 URLs).
+  const duplicateIds = new Set(Object.keys(canonicalOverrides));
+
   const wordsArr = words as DarijaWord[];
   const wordPages: MetadataRoute.Sitemap = wordsArr
     .filter(isWordWorthy)
-    .slice(0, 2000)
+    .filter(word => !duplicateIds.has(word.id))
+    // No arbitrary cap: every worthy, non-duplicate word page is prerendered
+    // and indexable, so all belong in the sitemap (well under the 50k limit).
     .map(word => ({
       url: `${SITE_URL}/word/${word.id}`,
       changeFrequency: 'monthly',
@@ -72,7 +79,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const phrasesArr = phrases as DarijaPhrase[];
   const phrasePages: MetadataRoute.Sitemap = phrasesArr
     .filter(isPhraseWorthy)
-    .slice(0, 500)
+    // Previously capped at 500, which suppressed ~980 worthy phrase pages
+    // from the sitemap and left them in "Crawled - currently not indexed".
     .map(phrase => ({
       url: `${SITE_URL}/phrase/${phrase.id}`,
       changeFrequency: 'monthly',
