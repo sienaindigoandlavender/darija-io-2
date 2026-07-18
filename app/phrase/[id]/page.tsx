@@ -85,9 +85,9 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
   // every page dynamic — 10k 'static' pages invoking a function per request
   // (310K invocations, 4h27m CPU on Vercel free tier, July 2026). English
   // labels are hardcoded; French word data still renders as content.
-  const locale = 'en';
-  const meaning = locale === 'fr' && phrase.french ? phrase.french : phrase.english;
-  const secondary = locale === 'fr' ? phrase.english : phrase.french;
+  // English-first static rendering; .french still displays as secondary content.
+  const meaning = phrase.english;
+  const secondary = phrase.french;
 
   // Get related phrases from same category. Only link to worthy phrases —
   // others are noindex/404 and shouldn't appear as inbound links.
@@ -193,14 +193,14 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
           <div className="space-y-3 mb-8">
             <div className="flex items-baseline gap-3">
               <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">
-                {locale === 'fr' ? 'FR' : 'EN'}
+                {'EN'}
               </span>
               <span className="text-lg text-neutral-900">{meaning}</span>
             </div>
             {secondary && (
               <div className="flex items-baseline gap-3">
                 <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">
-                  {locale === 'fr' ? 'EN' : 'FR'}
+                  {'FR'}
                 </span>
                 <span className="text-lg text-neutral-700">{secondary}</span>
               </div>
@@ -266,7 +266,7 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
                         {rp.darija}
                       </span>
                       <span className="text-neutral-400 mx-2">—</span>
-                      <span className="text-neutral-600">{locale === 'fr' && rp.french ? rp.french : rp.english}</span>
+                      <span className="text-neutral-600">{rp.english}</span>
                     </div>
                     <span className="text-neutral-300 text-sm shrink-0" dir="rtl">{rp.arabic}</span>
                   </div>
