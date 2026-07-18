@@ -42,8 +42,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   // every page dynamic — 10k 'static' pages invoking a function per request
   // (310K invocations, 4h27m CPU on Vercel free tier, July 2026). English
   // labels are hardcoded; French word data still renders as content.
-  const locale = 'en';
-  const meaning = locale === 'fr' && word.french ? word.french : word.english;
+  // English-first static rendering; .french still displays as secondary content.
+  const meaning = word.english;
 
   const overrideTitle = WORD_TITLE_OVERRIDES[params.id];
   const title = `${word.darija} (${word.arabic}) — ${meaning} in Darija`;
@@ -89,9 +89,8 @@ export default async function WordPage({ params }: { params: { id: string } }) {
   // every page dynamic — 10k 'static' pages invoking a function per request
   // (310K invocations, 4h27m CPU on Vercel free tier, July 2026). English
   // labels are hardcoded; French word data still renders as content.
-  const locale = 'en';
-  const meaning = locale === 'fr' && word.french ? word.french : word.english;
-  const secondary = locale === 'fr' ? word.english : word.french;
+  const meaning = word.english;
+  const secondary = word.french;
 
   // Same-root words (only fetched if word.root is set). Skip canonicalized
   // duplicates so we don't link to URLs that redirect away.
@@ -252,7 +251,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
                       <p className="font-arabic text-xl text-black" dir="rtl" lang="ar">{ex.arabic}</p>
                       <p className="text-neutral-900">{ex.darija}</p>
                       <p className="text-sm text-neutral-500">
-                        {locale === 'fr' && ex.french ? ex.french : ex.english}
+                        {ex.english}
                       </p>
                     </div>
                   ))}
@@ -286,7 +285,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
                         className="text-sm border border-neutral-200 px-3 py-2.5 hover:border-[#c53a1a] hover:text-[#c53a1a] transition-colors"
                       >
                         {rw.darija}
-                        <span className="text-neutral-400 ml-2">{locale === 'fr' && rw.french ? rw.french : rw.english}</span>
+                        <span className="text-neutral-400 ml-2">{rw.english}</span>
                       </Link>
                     ))}
                   </div>
@@ -309,7 +308,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
                 arabic: word.arabic,
                 pronunciation: word.pronunciation,
               })}
-              {word.french && locale !== 'fr' ? ` The French equivalent is "${word.french}." ` : ''}
+              {word.french ? ` The French equivalent is "${word.french}." ` : ''}
               {word.cultural_note ? ` ${word.cultural_note}` : ''}
             </p>
 
