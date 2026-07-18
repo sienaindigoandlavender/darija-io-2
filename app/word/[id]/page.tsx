@@ -302,12 +302,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
               {`How to say "${word.english}" in Moroccan Arabic`}
             </h2>
             <p className="text-neutral-900 leading-relaxed">
-              {t.rich('howToSayBody', {
-                english: word.english,
-                darija: word.darija,
-                arabic: word.arabic,
-                pronunciation: word.pronunciation,
-              })}
+              {`In Darija (Moroccan Arabic), "${word.english}" is ${word.darija} (${word.arabic}), pronounced /${word.pronunciation}/.`}
               {word.french ? ` The French equivalent is "${word.french}." ` : ''}
               {word.cultural_note ? ` ${word.cultural_note}` : ''}
             </p>
