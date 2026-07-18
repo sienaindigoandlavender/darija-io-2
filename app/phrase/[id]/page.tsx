@@ -2,7 +2,6 @@ import { getPhraseById, getAllPhrases, getPhrasesByCategory, isPhraseWorthy } fr
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getTranslations, getLocale } from 'next-intl/server';
 import AudioButton from '@/components/AudioButton';
 import RecentTracker from '@/components/RecentTracker';
 
@@ -82,9 +81,11 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
   const { id } = await params;
   const phrase = await getPhraseById(id);
   if (!phrase) notFound();
-
-  const t = await getTranslations('phrase');
-  const locale = await getLocale();
+  // Static rendering: locale detection read cookies()/headers(), which made
+  // every page dynamic — 10k 'static' pages invoking a function per request
+  // (310K invocations, 4h27m CPU on Vercel free tier, July 2026). English
+  // labels are hardcoded; French word data still renders as content.
+  const locale = 'en';
   const meaning = locale === 'fr' && phrase.french ? phrase.french : phrase.english;
   const secondary = locale === 'fr' ? phrase.english : phrase.french;
 
@@ -206,7 +207,7 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
             )}
             {phrase.literal_translation && (
               <div className="flex items-baseline gap-3">
-                <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">{t('literally').slice(0, 3).toUpperCase()}</span>
+                <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide w-12 shrink-0">{'LIT'}</span>
                 <span className="text-lg text-neutral-500">{phrase.literal_translation}</span>
               </div>
             )}
@@ -230,7 +231,7 @@ export default async function PhrasePage({ params }: { params: Promise<{ id: str
           {/* Response */}
           {phrase.response && (
             <div className="border-l-2 border-neutral-200 pl-6 mb-8">
-              <p className="text-xs font-medium text-neutral-400 uppercase tracking-wide mb-2">{t('theyReply')}</p>
+              <p className="text-xs font-medium text-neutral-400 uppercase tracking-wide mb-2">{"They'll reply"}</p>
               <p className="text-xl text-neutral-900 mb-1" dir="rtl" lang="ar">{phrase.response.arabic}</p>
               <p className="text-lg text-neutral-700 mb-1">{phrase.response.darija}</p>
               <p className="text-neutral-500">{phrase.response.english}</p>
