@@ -2,7 +2,6 @@ import { getWordById, getAllWords, getWordsByRoot } from '@/lib/dictionary';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getTranslations, getLocale } from 'next-intl/server';
 import AudioButton from '@/components/AudioButton';
 import RecentTracker from '@/components/RecentTracker';
 import canonicalOverrides from '@/data/canonical-overrides.json';
@@ -39,8 +38,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const word = await getWordById(params.id);
   if (!word) return { title: 'Word Not Found' };
-
-  const locale = await getLocale();
+  // Static rendering: locale detection read cookies()/headers(), which made
+  // every page dynamic — 10k 'static' pages invoking a function per request
+  // (310K invocations, 4h27m CPU on Vercel free tier, July 2026). English
+  // labels are hardcoded; French word data still renders as content.
+  const locale = 'en';
   const meaning = locale === 'fr' && word.french ? word.french : word.english;
 
   const overrideTitle = WORD_TITLE_OVERRIDES[params.id];
@@ -83,9 +85,11 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 export default async function WordPage({ params }: { params: { id: string } }) {
   const word = await getWordById(params.id);
   if (!word) notFound();
-
-  const t = await getTranslations('word');
-  const locale = await getLocale();
+  // Static rendering: locale detection read cookies()/headers(), which made
+  // every page dynamic — 10k 'static' pages invoking a function per request
+  // (310K invocations, 4h27m CPU on Vercel free tier, July 2026). English
+  // labels are hardcoded; French word data still renders as content.
+  const locale = 'en';
   const meaning = locale === 'fr' && word.french ? word.french : word.english;
   const secondary = locale === 'fr' ? word.english : word.french;
 
@@ -167,7 +171,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
         <section className="px-6 md:px-[8%] lg:px-[12%] pt-20 pb-4 md:pb-8">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <Link href="/" className="inline-flex items-center text-sm text-neutral-500 hover:text-neutral-900 transition-colors py-2 -my-2">
-              &larr; {t('back')}
+              &larr; {'Dictionary'}
             </Link>
             {word.category && (
               <Link
@@ -197,7 +201,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
 
               {word.arabizi_variants && word.arabizi_variants.length > 0 && (
                 <p className="text-sm text-neutral-400 mt-1">
-                  <span className="uppercase tracking-wider text-xs mr-2">{t('alsoWritten')}</span>
+                  <span className="uppercase tracking-wider text-xs mr-2">{'Also written'}</span>
                   {word.arabizi_variants.join(' · ')}
                 </p>
               )}
@@ -235,14 +239,14 @@ export default async function WordPage({ params }: { params: { id: string } }) {
             <div className="md:col-span-5 md:col-start-8 flex flex-col gap-10">
               {word.cultural_note && (
                 <div className="border-l-2 border-[#d4931a] pl-6">
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#d4931a] mb-3">{t('culturalNote')}</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#d4931a] mb-3">{'Cultural note'}</p>
                   <p className="text-neutral-900 leading-relaxed text-lg">{word.cultural_note}</p>
                 </div>
               )}
 
               {word.examples?.length > 0 && (
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4">{t('examples')}</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4">{'In use'}</p>
                   {word.examples.map((ex, i) => (
                     <div key={i} className="space-y-1 mb-5">
                       <p className="font-arabic text-xl text-black" dir="rtl" lang="ar">{ex.arabic}</p>
@@ -257,7 +261,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
 
               {word.conjugation?.past && (
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4">{t('conjugation')}</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4">{'Conjugation'}</p>
                   <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
                     {Object.entries(word.conjugation.past).map(([k, v]) => (
                       <div key={k} className="flex gap-3">
@@ -272,7 +276,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
               {sameRoot.length > 0 && (
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4">
-                    {t('sameRoot')} <span className="font-mono">√ {word.root}</span>
+                    {'Same root'} <span className="font-mono">√ {word.root}</span>
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {sameRoot.map(rw => (
@@ -296,7 +300,7 @@ export default async function WordPage({ params }: { params: { id: string } }) {
         <section className="px-6 md:px-[8%] lg:px-[12%] py-12 md:py-16 border-t border-neutral-100">
           <div className="max-w-2xl">
             <h2 className="font-display text-2xl mb-4">
-              {t('howToSayTitle', { english: word.english })}
+              {`How to say "${word.english}" in Moroccan Arabic`}
             </h2>
             <p className="text-neutral-900 leading-relaxed">
               {t.rich('howToSayBody', {
